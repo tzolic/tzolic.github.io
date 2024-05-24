@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Abdullah's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+
+<body>
+<!----------header---------->
+<div class="container">
+  <nav>
+    <a href="index.html">
+      <img alt="logo" src="content/3-images/logo.png" class="logo">
+    </a>
+    <ul id="sidemenu">  
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+  </nav>
+</div>
+
+<!----------contact---------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+
+      <div class="contact-left">
+        <h1 class="title">Contact Me</h1>
+        <p> <i class="fa-solid fa-envelope"></i> aihduty@gmail.com</p>
+        <p> <i class="fa-solid fa-phone"></i> (+353) 874870538</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/abdullah-iraqi-houssaini/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/tzolic"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="content/2-CV/CV.pdf" target="_blank" class="contact-button">Click To See My CV</a>
+      </div>
+
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit" class="contact-button">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>Copyright <i class="fa-solid fa-copyright"></i> Abdullah</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

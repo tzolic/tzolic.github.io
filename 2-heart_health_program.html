@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Abdullah's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+</head>
+<body>
+
+<!----------header---------->
+<div class="container">
+  <nav>
+    <a href="index.html">
+      <img alt="logo" src="content/3-images/logo.png" class="logo">
+    </a>
+    <ul id="sidemenu">
+      <li><a href="projects.html">Return</a></li>
+      <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+  </nav>
+</div>
+
+<!----------about---------->
+<div class="container">
+  <p class="title">Heart Health Program</p>
+  
+
+    <div class="project-row-1">
+      <p class="sub-title">DESCRIPTION <i class="fa-solid fa-circle-info"></i></p>
+
+      <p class="question">What is this?</p>
+      <p class="answer">
+        A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score.
+        <br><br> An ERICE score is the likelihood in percentage that you will experience heart-related issues within the next 10 years. It is a bit depressing but yeah better be safe than surprised.
+        <br><br> For the blood pressure assessment, you will need ...
+      </p>
+
+      <br><hr>
+
+
+      <p class="question">Why did I build it?</p>
+      <p class="answer">
+        I had an assignment.
+      </p>
+
+      <br><hr>
+
+      <p class="question">For who?</p>
+      <p class="answer">
+        For everyone who want to be aware of their heart's health condition.
+      </p>
+    </div>
+
+    <div class="project-row-2">
+      <p class="sub-title" id="before-video">DEMO <i class="fa-solid fa-eye"></i></p>
+      <video id="project-video" controls>
+        <source src="projects/2-heart_health_program/tutorial.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-button-container">
+        <a href="https://your-project-link.com" class="project-button" target="_blank">Click me to take a look at the project by yourself</a>
+      </div>
+
+    </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

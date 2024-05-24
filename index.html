@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Abdullah's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+
+<body>
+<!----------header---------->
+<div id="background">
+  <div class="container">
+    <nav>
+      <a href="index.html">
+        <img alt="logo" src="content/3-images/logo.png" class="logo">
+      </a>
+      <ul id="sidemenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+      <p>Computer Science Student <span style="color: #004c59">@</span> UCD</p>
+      <h1>Hi, I'm <span style="color: #004c59">Abdullah</span> <br>From Morocco</h1>
+    </div>
+
+    <div class="minigame">
+      <div class="score-board">
+        <div id="user-label" class="badge">you</div>
+        <div id="computer-label" class="badge">me</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+      </div>
+
+      <div class="result">
+        <p>Want to challenge me? Make your move!</p>
+      </div>
+
+      <div class="choices">
+        <div class="choice" id="r">
+          <img alt="rock" src="content/3-images/rock.png">
+        </div>
+
+        <div class="choice" id="p">
+          <img alt="paper" src="content/3-images/paper.png">
+        </div>
+
+        <div class="choice" id="s">
+          <img alt="scissors" src="content/3-images/scissors.png">
+        </div>
+      </div>
+
+      
+    </div>
+    
+    
+
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="minigame.js"></script>
+</body>
+</html>
