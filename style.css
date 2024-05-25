@@ -162,8 +162,8 @@ nav ul li a:hover::after{
 }
 
 .win-glow{
-  border: 4px solid #0092a2;
-  box-shadow: 0 0 10px #0092a2;
+  border: 4px solid lightgreen;
+  box-shadow: 0 0 10px lightgreen;
 }
 
 .lose-glow{

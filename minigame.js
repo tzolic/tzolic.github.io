@@ -29,7 +29,7 @@ function win(user_choice, computer_choice){
   computer_score_span.innerHTML = computer_score;
   const small_user_word = "you".fontsize(2).sub();
   const small_computer_word = "me".fontsize(2).sub();
-  result_p.innerHTML = `${convertToWord(user_choice)}${small_user_word} beats ${convertToWord(computer_choice)}${small_computer_word}. <span style="color: #0092a2;">You win! 🎉</span>`;
+  result_p.innerHTML = `${convertToWord(user_choice)}${small_user_word} beats ${convertToWord(computer_choice)}${small_computer_word}. <span style="color: #90EE90;">You win! 🎉</span>`;
   document.getElementById(user_choice).classList.add('win-glow');
   setTimeout(function(){document.getElementById(user_choice).classList.remove('win-glow')}, 500);
 }
