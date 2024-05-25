@@ -604,6 +604,12 @@ video{
 
 /*----------contact----------*/
 
+#msg{
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .contact-button{
   display: block;
   margin: 50px auto;
@@ -794,18 +800,14 @@ nav .fa-solid{
   .copyright{
     font-size: 14px;
   }
+
+  .choice{
+    width: 80px;
+    height: 80px;
+  }
 }
 
-#msg{
-  display: block;
-  font-weight: bold;
-  font-size: 20px;
-}
 
-.choice{
-  width: 80px;
-  height: 80px;
-}
 
 @media only screen and (min-width: 800px) and (max-width: 1200px){
 
