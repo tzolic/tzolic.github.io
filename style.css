@@ -25,9 +25,7 @@ body{
   width: 100%;
   height: auto;
   background-image: url(content/2-images/background.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background: #000 url('content/2-images/background.png') center center / cover fixed no-repeat;
 }
 
 .container{
