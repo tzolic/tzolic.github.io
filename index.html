@@ -9,53 +9,42 @@
 </head>
 
 <body>
+
 <!----------header---------->
 <div id="background">
-  <div class="container">
+  <div class="container" id="home">
     <nav>
-      <a href="index.html">
-        <img alt="logo" src="content/2-images/logo.png" class="logo">
+      <a class="logo">
+        <span>A</span>bdullah.
       </a>
       <ul id="sidemenu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
       </ul>
       <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
+
+
+
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        var nav = document.querySelector("nav");
+        nav.classList.toggle("sticky", window.scrollY > 0);
+      })
+
+    </script>
+
+
+
+
+
     <div class="header-text">
-      <p>Computer Science Student <span style="color: #004c59">@</span> UCD</p>
-      <h1>Hi, I'm <span style="color: #004c59">Abdullah</span> <br>From Morocco</h1>
-    </div>
-
-    <div class="minigame">
-      <div class="score-board">
-        <div id="user-label" class="badge">you</div>
-        <div id="computer-label" class="badge">me</div>
-        <span id="user-score">0</span>:<span id="computer-score">0</span>
-      </div>
-
-      <div class="result">
-        <p>Want to challenge me? Make your move!</p>
-      </div>
-
-      <div class="choices">
-        <div class="choice" id="r">
-          <img alt="rock" src="content/2-images/rock.png">
-        </div>
-
-        <div class="choice" id="p">
-          <img alt="paper" src="content/2-images/paper.png">
-        </div>
-
-        <div class="choice" id="s">
-          <img alt="scissors" src="content/2-images/scissors.png">
-        </div>
-      </div>
-
-      
+      <p>Computer Science Student <span style="color: #0092a2">@</span> UCD</p>
+      <h1>Hi, I'm <span style="color: #0092a2">Abdullah</span> <br>From Morocco</h1>
     </div>
     
   </div>
@@ -65,7 +54,402 @@
 
 
 
+
+
+
+
+
+<!----------projects---------->
+<div class="container" id="projects">
+  <h1 class="title top-space">My Projects</h1>
+  <div class="project-list">
+
+      <!----------1 portfolio website---------->
+      <div class="project">
+        <img src="projects/1-portfolio_website/cover.png">
+        <div class="layer">
+          <div>
+            <img src="content/1-icons/1-tools/3-html.svg">
+            <img src="content/1-icons/1-tools/4-css.svg">
+            <img src="content/1-icons/4-no_use/javascript.svg">
+          </div>
+
+          <h3>Portfolio Website</h3>
+          <p>A website where I present myself and most importantly share the projects I have worked on :)</p>
+          <a href="1-portfolio_website.html"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+
+      <!----------2 heart health program---------->
+      <div class="project">
+        <img src="projects/2-heart_health_program/cover.png">
+        <div class="layer">
+          <div>
+            <img src="content/1-icons/1-tools/1-c.svg">
+          </div>
+
+          <h3>Heart Health Program</h3>
+          <p>A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score</p>
+          <a href="2-heart_health_program.html"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!----------about---------->
+<div class="container" id="about">
+  <div class="row top-space">
+
+    <div class="about-col-1">
+      <img alt="about" src="content/2-images/about.jpeg">
+    </div>
+
+    <div class="about-col-2">
+      <h1 class="title" id="title-about-me">About Me</h1>
+      <p id="text-location">
+        <i class="fa-solid fa-location-dot"></i> Dublin, Ireland
+      </p>
+      <p id="about-text">
+        With a thirst for <span style="color: #0092a2"><b>knowledge</b></span> and a love for <span style="color: #0092a2"><b>problem-solving</b></span>, <br>
+        I'm dedicated to exploring the dynamic realm of technology and constantly seeking new opportunities for <span style="color: #0092a2"><b>growth</b></span>.
+      </p>
+      <blockquote>
+        Success is walking from failure to failure with no loss of enthusiasm.
+        <span>Winston Churchill</span>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="tab-titles">
+    <p class="tab-links active-link" onclick="opentab('tools')">Tools<i class="fa-solid fa-star"></i></p>
+    <p class="tab-links" onclick="opentab('experience')">Experience<i class="fa-solid fa-circle-check"></i></p>
+    <p class="tab-links" onclick="opentab('education')">Education<i class="fa-solid fa-graduation-cap"></i></p>
+  </div>
+
+  <div class="tab-contents active-tab" id="tools">
+    <!----------tools---------->
+    <div class="tools-container">
+
+      <!----------1 c---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/1-c.svg" class="icon">
+          </div>
+          <h3>C</h3>
+        </div>
+        <p>Programming Language</p>
+      </div>
+
+      <!----------2 python---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/2-python.svg" class="icon">
+          </div>
+          <h3>Python</h3>
+        </div>
+        <p>Programming Language</p>
+      </div>
+
+      <!----------3 html---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/3-html.svg" class="icon">
+          </div>
+          <h3>HTML 5</h3>
+        </div>
+        <p>Web Design</p>
+      </div>
+
+      <!----------4 css---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/4-css.svg" class="icon">
+          </div>
+          <h3>CSS</h3>
+        </div>
+        <p>Web Design</p>
+      </div>
+
+      <!----------5 google sites---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/5-google_sites.png" class="icon">
+          </div>
+          <h3>Google Sites</h3>
+        </div>
+        <p>Web Design</p>
+      </div>
+
+      <!----------6 git---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/6-git.svg" class="icon">
+          </div>
+          <h3>Git</h3>
+        </div>
+        <p>Version Control</p>
+      </div>
+
+      <!----------7 github---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/7-github.svg" class="icon">
+          </div>
+          <h3>Github</h3>
+        </div>
+        <p>Version Control</p>
+      </div>
+
+      <!----------8 vs code---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/8-vs_code.svg" class="icon">
+          </div>
+          <h3>VS Code</h3>
+        </div>
+        <p>Development</p>
+      </div>
+
+      <!----------9 excel---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/9-eclipse.svg" class="icon">
+          </div>
+          <h3>Eclipse</h3>
+        </div>
+        <p>Development</p>
+      </div>
+
+      <!----------10 word---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/10-excel.svg" class="icon">
+          </div>
+          <h3>Excel</h3>
+        </div>
+        <p>Microsoft Office</p>
+      </div>
+
+      <!----------11 powerpoint---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/11-word.svg" class="icon">
+          </div>
+          <h3>Word</h3>
+        </div>
+        <p>Microsoft Office</p>
+      </div>
+
+      <!----------12 notion---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/12-powerpoint.svg" class="icon">
+          </div>
+          <h3>Powerpoint</h3>
+        </div>
+        <p>Microsoft Office</p>
+      </div>
+
+      <!----------13 anki---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/13-notion.svg" class="icon">
+          </div>
+          <h3>Notion</h3>
+        </div>
+        <p>Productivity</p>
+      </div>
+
+      <!----------14 anki---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/14-anki.png" class="icon">
+          </div>
+          <h3>Anki</h3>
+        </div>
+        <p>Productivity</p>
+      </div>
+
+      <!----------15 latex---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/15-latex.svg" class="icon">
+          </div>
+          <h3>LaTeX</h3>
+        </div>
+        <p>Markup Language</p>
+      </div>
+
+      <!----------16 markdown---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/1-tools/16-markdown.svg" class="icon">
+          </div>
+          <h3>Markdown</h3>
+        </div>
+        <p>Markup Language</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="tab-contents" id="experience">
+  <div class="experience-container">
+  <!----------experience---------->
+
+    <!----------mobiblanc---------->
+    <div class="icon-box">
+      <div class="icon-title">
+        <div class="img">
+          <img src="content/1-icons/2-experience/1-mobiblanc.jpeg" class="icon">
+        </div>
+        <h3>Artificial Intelligence Intern</h3>
+      </div>  
+      <h5>Mobiblanc</h5>
+      <p>Jul 2022</p>
+    </div>
+
+    <!----------lafactory---------->
+    <div class="icon-box">
+      <div class="icon-title">
+        <div class="img">
+          <img src="content/1-icons/2-experience/2-lafactory.jpeg" class="icon">
+        </div>
+        <h3>Startup Accelerrator Intern</h3>
+      </div>
+      <h5>LaFactory</h5>
+      <p>Dec 2019</p>
+    </div>
+
+    <!----------holomedia---------->
+    <div class="icon-box">
+      <div class="icon-title">
+        <div class="img">
+          <img src="content/1-icons/2-experience/3-holomedia.jpeg" class="icon">
+        </div>
+        <h3>Marketing Intern</h3>
+      </div>
+      <h5>HoloMedia</h5>
+      <p>Oct 2019</p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<div class="tab-contents" id="education">
+  <div class="education-container">
+    <!----------education---------->
+  
+      <!----------ucd---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/3-education/1-ucd.jpeg" class="icon">
+          </div>
+          <h3>University College Dublin (UCD)</h3>
+        </div>  
+        <h5>Bachelor of Science, Computer Science</h5>
+        <p>Sep 2023 - Present</p>
+      </div>
+
+      <!----------lyautey---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-icons/3-education/2-lyautey.jpeg" class="icon">
+          </div>
+          <h3>Lycée Lyautey</h3>
+        </div>  
+        <h5>French Baccalaureate</h5>
+        <p>Sep 2016 - July 2023</p>
+      </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!----------contact---------->
+<div id="contact" class="container">
+  <div class="row top-space">
+
+    <div class="contact-left">
+      <h1 class="title">Contact Me</h1>
+      <p> <i class="fa-solid fa-envelope"></i> aihduty@gmail.com</p>
+      <p> <i class="fa-solid fa-phone"></i> (+353) 874870538</p>
+      <div class="social-icons">
+        <a href="https://github.com/tzolic"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/abdullah-iraqi-houssaini/"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <form name="submit-to-google-sheet">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit" class="contact-button">Submit</button>
+      </form>
+      <span id="msg"></span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="copyright">
+  <p>Copyright <i class="fa-solid fa-copyright"></i> Abdullah</p>
+</div>
+
+
+
+
+
+
 <script src="script.js"></script>
-<script src="minigame.js"></script>
+
 </body>
+
+
 </html>
