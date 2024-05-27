@@ -26,6 +26,7 @@ body{
   height: 100vh;
   background: linear-gradient(-45deg, #C1272D, #004C59, #00414C, #003640, #C1272D);
   animation: gradient 6s ease infinite;
+  -webkit-animation: gradient 6s ease infinite;
 
   background-color: #000;
   background-position: center;
