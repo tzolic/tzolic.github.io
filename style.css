@@ -708,6 +708,10 @@ nav .fa-solid{
 
 @media only screen and (max-width: 675px){
 
+  #background{
+    background-size: 400% 100%;
+  }
+
   .title{
     font-size: 40px;
   }
