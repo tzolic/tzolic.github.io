@@ -28,7 +28,7 @@ body{
   animation: gradient 6s ease infinite;
 
   background-position: center;
-  background-size: 400% 200%;
+  background-size: 500% 250%;
   background-repeat: no-repeat; 
 }
 
@@ -709,7 +709,7 @@ nav .fa-solid{
 @media only screen and (max-width: 675px){
 
   #background{
-    background-size: 400% 100%;
+    background-size: 500% 100%;
   }
 
   .title{
