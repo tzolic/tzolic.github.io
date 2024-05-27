@@ -25,13 +25,11 @@ body{
   width: 100%;
   height: 100vh;
   background: linear-gradient(-45deg, #C1272D, #004C59, #00414C, #003640, #C1272D);
-  animation: gradient 16s ease infinite;
+  animation: gradient 6s ease infinite;
 
-  background-color: #000;
   background-position: center;
   background-size: 400% 200%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
 }
 
 @keyframes gradient {
