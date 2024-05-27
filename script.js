@@ -51,3 +51,12 @@ form.addEventListener('submit', e => {
       .catch(error => console.error('Error!', error.message));
   }
 });
+
+
+
+/*---------navbar scroll----------*/
+
+window.addEventListener("scroll", function(){
+  var nav = document.querySelector("nav");
+  nav.classList.toggle("sticky", window.scrollY > 0);
+})
