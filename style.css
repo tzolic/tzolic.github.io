@@ -28,7 +28,7 @@ body{
   animation: gradient 6s ease infinite;
 
   background-position: center;
-  background-size: 500% 250%;
+  background-size: 500% 100%;
   background-repeat: no-repeat; 
 }
 
@@ -675,16 +675,6 @@ nav .fa-solid{
 
 /*----------header text----------*/
 
-@media only screen and (min-height: 1000px){
-  .header-text{
-    font-size: 3.33vh;
-  }
-
-  .header-text h1{
-    font-size: 6.66vh;
-  }
-}
-
 @media only screen and (max-width: 320px){
   .header-text{
     font-size: 2.5vh;
@@ -705,12 +695,18 @@ nav .fa-solid{
   }
 }
 
+@media only screen and (min-height: 1000px){
+  .header-text{
+    font-size: 3.33vh;
+  }
+
+  .header-text h1{
+    font-size: 6.66vh;
+  }
+}
+
 
 @media only screen and (max-width: 675px){
-
-  #background{
-    background-size: 500% 100%;
-  }
 
   .title{
     font-size: 40px;
