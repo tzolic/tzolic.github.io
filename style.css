@@ -626,13 +626,13 @@ video{
 
 .contact-left p{
   margin-top: 30px;
-  font-size: 25px;
+  font-size: 150%;
 }
 
 .contact-left p i{
   color: #0092a2;
-  margin-right: 15px;
-  font-size: 40px;
+  margin-right: 5%;
+  font-size: 200%;
 }
 
 .social-icons{
@@ -642,8 +642,8 @@ video{
 
 .social-icons a{
   text-decoration: none;
-  font-size: 60px;
-  margin-right: 40px;
+  font-size: 500%;
+  margin-right: 10%;
   color: #ababab;
   display: inline-block;
   transition: transform 0.5s;
