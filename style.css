@@ -28,7 +28,7 @@ body{
   animation: gradient 6s ease infinite;
 
   background-position: center;
-  background-size: 500% 100%;
+  background-size: 200% 100%;
   background-repeat: no-repeat; 
 }
 
@@ -135,6 +135,10 @@ nav ul li a::after{
 
 nav ul li a:hover::after{
   width: 100%;
+}
+
+#morocco-word{
+  color: #C1272D;
 }
 
 .header-text{
@@ -455,7 +459,7 @@ blockquote span{
 
 .layer h3{
   position: absolute;
-  top: 30%;
+  top: 35%;
   font-weight: 500;
   font-family: 'Bebas Neue';
   font-size: 40px;
@@ -463,39 +467,53 @@ blockquote span{
 
 .layer p{
   position: absolute;
-  padding: 0 40px;
-  top: 50%;
-}
-
-.layer a{
-  position: absolute;
-  bottom: 5%;
-  color: #0092a2;
-  text-decoration: none;
+  padding: 0 5%;
+  top: 60%;
   font-size: 20px;
-  line-height: 60px;
-  background: #fff;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  text-align: center;
 }
 
-.project:hover img{
+.project:hover > img{
   transform: scale(1.1);
 }
 
 
 /*----------projects pages----------*/
 
-#projects-nav{
-  left: 70%;
-  position: absolute;
+#project-title{
+  margin-top: 5vh;
+}
+
+.return-button{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+
+  width: 100vw;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  background: #0092a2;
+  padding: 1% 10%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.return-button:hover{
+  transform: scale(1.05);
+
 }
 
 .project-row-1, .project-row-2{
   margin-top: 2.5%;
-  padding: 2.5%;
+  padding: 5vh 5vw;
 }
 
 .project-row-1{
@@ -519,19 +537,20 @@ blockquote span{
 
 .question{
   margin-top: 20px;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 600;
   color: #fff;
+  text-shadow: 0 0 10px  #006233, 0 0 15px #006233, 0 0 20px #006233;
 }
 
 .answer{
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 1.5;
 }
 
 #before-video{
-  margin-bottom: 20px;
+  margin-bottom: 5vh;
 }
 
 video{
@@ -543,31 +562,27 @@ video{
   margin: 0 auto;
 }
 
-.project-button-container{
-  text-align: center;
-  margin-top: 40px;
-}
-
 .project-button{
-  display: inline-block;
-  padding: 2.5% 5%;
-  font-size: 30px;
-  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
   color: #fff;
-  background-color: #0092a2;
-  border: none;
-  border-radius: 8px;
+  margin: 5vh auto 0;
+  width: 50vw;
+  font-weight: bold;
+  font-size: 40px;
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s;
+  background: #0092a2;
+  padding: 2% 2%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.3s;
 }
 
 .project-button:hover {
   background-color: #33b249;
   transform: scale(1.05);
-}
-
-.project-button:active {
-  background-color: green;
 }
 
 /*----------contact----------*/
@@ -750,6 +765,14 @@ nav .fa-solid{
     font-size: 12px;
   }
 
+  .question{
+    font-size: 25px;
+  }
+
+  .answer{
+    font-size: 20px;
+  }
+
   #project-video{
     width: 300px;
   }
@@ -765,6 +788,10 @@ nav .fa-solid{
   .choice{
     width: 80px;
     height: 80px;
+  }
+
+  .project-button{
+    font-size: 20px;
   }
 }
 
@@ -845,14 +872,6 @@ nav .fa-solid{
 
   .layer p{
     font-size: 25px;
-  }
-
-  .layer a{
-    font-size: 30px;
-    line-height: 80px;
-    background: #fff;
-    width: 80px;
-    height: 80px;
   }
 
   .tools-container{

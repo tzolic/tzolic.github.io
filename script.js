@@ -60,3 +60,10 @@ window.addEventListener("scroll", function(){
   var nav = document.querySelector("nav");
   nav.classList.toggle("sticky", window.scrollY > 0);
 })
+
+
+document.querySelectorAll('.layer').forEach(function(layer) {
+  layer.addEventListener('click', function() {
+      window.location.href = this.getAttribute('data-url');
+  });
+});
