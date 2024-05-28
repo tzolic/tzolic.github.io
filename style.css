@@ -539,9 +539,9 @@ blockquote span{
   margin-top: 20px;
   font-size: 35px;
   font-weight: bold;
-  color: #E1341E;
+  color: #000;
   text-transform: uppercase;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 5px #fff;
 }
 
 .answer{
