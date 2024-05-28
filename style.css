@@ -540,7 +540,9 @@ blockquote span{
   font-size: 35px;
   font-weight: 600;
   color: #fff;
-  text-shadow: 0 0 10px  #006233, 0 0 15px #006233, 0 0 20px #006233;
+  text-shadow: 0 0 5px #C1272D, 0 0 10px #C1272D, 0 0 15px #C1272D, 
+             0 0 20px #006233, 0 0 30px #006233, 0 0 40px #000;
+
 }
 
 .answer{
