@@ -439,6 +439,7 @@ blockquote span{
   flex-direction: column;
   text-align: center;
   transition: height 0.5s;
+  overflow: auto;
 }
 
 .img-container{
@@ -454,12 +455,13 @@ blockquote span{
 .layer img{
   width: 60px;
   height: 60px;
-  margin: 0 5px 20px 5px;
+  margin: 0 2.5%;
 }
 
 .layer h3{
   position: absolute;
-  top: 35%;
+  top: 40%;
+  margin: 0 5%;
   font-weight: 500;
   font-family: 'Bebas Neue';
   font-size: 38px;
@@ -467,8 +469,9 @@ blockquote span{
 
 .layer p{
   position: absolute;
-  padding: 0 5%;
-  top: 60%;
+  top: 65%;
+  margin-right: 5%;
+  margin-left: 5%;
   font-size: 20px;
 }
 
@@ -542,13 +545,13 @@ blockquote span{
   text-transform: uppercase;
 
   color: #C1272D;
-  text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 8px #000;
 }
 
 .answer{
   margin-top: 20px;
   font-size: 30px;
-  line-height: 1.5;
+  line-height: 1.5; 
 }
 
 #before-video{
