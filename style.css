@@ -544,8 +544,15 @@ blockquote span{
   font-weight: bold;
   text-transform: uppercase;
 
-  color: #C1272D;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), 0 0 5px #333;
+  color: #fff;
+  text-shadow:
+    0 0 5px #C1272D,
+    0 0 10px #C1272D,
+    0 0 15px #C1272D,
+    0 0 20px #C1272D,
+    0 0 35px #C1272D,
+    0 0 40px #C1272D,
+    0 0 75px #C1272D;
 }
 
 .answer{
