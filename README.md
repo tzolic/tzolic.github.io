@@ -10,5 +10,5 @@ Show my projects to other people.
 
 ## Demo :eye:
 
-No need for a demo you are already on my portfolio website.
+https://tzolic.github.io
 
