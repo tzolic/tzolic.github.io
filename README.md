@@ -1,14 +1,14 @@
 # Portfolio Website
 
-## Description :mag:
+## Description 🔍
 
 A website where I present myself and most importantly share the projects I have worked on.
 
-## Purpose :dart:
+## Purpose 🎯
 
 Show my projects to other people.
 
-## Demo :eye:
+## Demo 👁️
 
 https://tzolic.github.io
 

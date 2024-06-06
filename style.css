@@ -538,11 +538,10 @@ blockquote span{
   margin-left: 2.5%;
 }
 
-.question{
+.project-header{
   margin-top: 20px;
   font-size: 35px;
   font-weight: bold;
-  text-transform: uppercase;
 
   color: #fff;
   text-shadow:
@@ -777,7 +776,7 @@ nav .fa-solid{
     font-size: 20px;
   }
 
-  .question{
+  .project-header{
     font-size: 25px;
   }
 
