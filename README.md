@@ -2,7 +2,7 @@
 
 ## Description 🔍
 
-A website where I present myself and most importantly share the projects I have worked on.
+A website where I present myself and share the projects I have worked on.
 
 ## Purpose 🎯
 
