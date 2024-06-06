@@ -2,11 +2,11 @@
 
 ## Description 🔍
 
-A website where I present myself and share the projects I have worked on.
+A website where I present myself and share my projects.
 
 ## Purpose 🎯
 
-Show my projects to other people.
+Showcase my work and attract opportunities.
 
 ## Demo 👁️
 
