@@ -1,8 +1,4 @@
-# Portfolio Website
-
-## Description 🔍
-
-A website where I present myself and share my projects.
+# Portfolio Website 🌐
 
 ## Purpose 🎯
 
