@@ -280,7 +280,7 @@ blockquote span{
   display: block;
 }
 
-.tools-container{
+.skills-container{
   display: grid;
   grid-template-columns: repeat(6,1fr);
   grid-gap: 1rem;
@@ -768,7 +768,7 @@ nav .fa-solid{
     margin-right: 20px;
   }
 
-  .tools-container,.experience-container,.education-container{
+  .skills-container,.experience-container,.education-container{
     grid-template-columns: repeat(2, 1fr);
     padding: 1.5rem 60px;
   }
@@ -880,7 +880,7 @@ nav .fa-solid{
 
 @media only screen and (min-width: 800px) and (max-width: 1200px){
 
-  .tools-container{
+  .skills-container{
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -899,7 +899,7 @@ nav .fa-solid{
     font-size: 25px;
   }
 
-  .tools-container{
+  .skills-container{
     grid-template-columns: repeat(4, 1fr);
   }
 }
