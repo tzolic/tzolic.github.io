@@ -6,5 +6,5 @@ Showcase my work and attract opportunities.
 
 ## Demo 👁️
 
-https://tzolic.github.io
+# https://tzolic.github.io
 
