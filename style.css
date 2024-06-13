@@ -223,14 +223,6 @@ blockquote::after{
   content: '';
 }
 
-blockquote span{
-  display:block;
-  color:#fff;
-  font-style: normal;
-  font-weight: bold;
-  margin-top:1em;
-}
-
 /*----------about part2----------*/
 
 .tab-titles{
