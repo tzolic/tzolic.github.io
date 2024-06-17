@@ -41,7 +41,7 @@ Description : A website where I present myself and most importantly share the pr
 
     <div class="header-text">
       <p>Computer Science Student <span style="color: #0092a2">@</span> UCD</p>
-      <h1>Hi, I'm <span style="color: #0092a2">Abdullah</span> <br> From <span id="morocco-word" >Morocco</span></h1>
+      <h1>Hi, I'm <span id="abdullah-word">Abdullah</span> <br> From <span id="morocco-word" >Morocco</span></h1>
     </div>
     
   </div>
@@ -59,44 +59,40 @@ Description : A website where I present myself and most importantly share the pr
 <!----------projects---------->
 <div class="container" id="projects">
   <h1 class="title top-space">Featured Projects</h1>
+
+  <div class="filter-sort-container">
+    <!----------filter dropdown---------->
+      <label for="filter-dropdown">Filter by Skill:</label>
+      <select id="filter-dropdown">
+
+        <option value="All" class="group-option">All</option>
+
+        <!----------backend---------->
+        <option value="Backend" class="group-option">Backend</option>
+        <option value="C">C</option>
+
+        <!----------frontend---------->
+        <option value="Frontend" class="group-option">Frontend</option>
+        <option value="HTML & CSS">HTML & CSS</option>
+        <option value="JavaScript">JavaScript</option>
+
+      </select>
+
+    <!----------sort dropdown---------->
+    <label for="sort-dropdown">Sort by date:</label>
+    <select id="sort-dropdown">
+      <option value="doneDateDesc">Newest First</option>
+      <option value="doneDateAsc">Oldest First</option>
+    </select>
+  </div>
+  
+
+
+
   <div class="project-list">
-
-    <!----------1 heart health program---------->
-    <div class="project">
-      <img src="projects/1-heart_health_program/cover.png">
-      <div class="layer" data-url="https://github.com/tzolic/heart_health_program">
-        <div>
-          <img src="content/1-icons/1-skills/1-c.svg" alt="cover">
-        </div>
-        <h3>Heart Health Program</h3>
-        <p>
-          A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score.
-        </p>
-      </div>
-    </div>
-
-    <!----------2 gantt chart
-    <div class="project">
-      <img src="projects/2-gantt_chart/cover.webp">
-      <div class="layer" data-url="">
-        <div>
-          <img src="content/1-icons/1-skills/1-c.svg" alt="cover">
-        </div>
-        <h3>Gantt Chart</h3>
-        <p>
-          A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score.
-        </p>
-      </div>
-    </div>
-    ---------->
-      
+    <!----------dynamic projects---------->      
   </div>
 </div>
-
-
-
-
-
 
 
 
@@ -107,7 +103,7 @@ Description : A website where I present myself and most importantly share the pr
   <div class="row top-space">
 
     <div class="about-col-1">
-      <img alt="about" src="content/2-images/about.jpeg">
+      <img alt="about" src="content/about.jpeg">
     </div>
 
     <div class="about-col-2">
@@ -132,184 +128,190 @@ Description : A website where I present myself and most importantly share the pr
   </div>
 
   <div class="tab-contents active-tab" id="skills">
+
     <!----------skills---------->
     <div class="skills-container">
 
-      <!----------1 c---------->
+      <!----------c---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/1-c.svg" class="icon">
+            <img src="content/1-skills/1-programming_languages/c.svg" class="icon">
           </div>
           <h3>C</h3>
         </div>
-        <p>Programming Language</p>
       </div>
 
-      <!----------2 python---------->
+      <!----------python---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/2-python.svg" class="icon">
+            <img src="content/1-skills/1-programming_languages/python.svg" class="icon">
           </div>
           <h3>Python</h3>
         </div>
-        <p>Programming Language</p>
       </div>
 
-      <!----------3 html---------->
+      <!----------html---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/3-html.svg" class="icon">
+            <img src="content/1-skills/2-web_development/html.svg" class="icon">
           </div>
           <h3>HTML 5</h3>
         </div>
-        <p>Web Design</p>
       </div>
 
-      <!----------4 css---------->
+      <!----------css---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/4-css.svg" class="icon">
+            <img src="content/1-skills/2-web_development/css.svg" class="icon">
           </div>
           <h3>CSS</h3>
         </div>
-        <p>Web Design</p>
       </div>
 
-      <!----------5 google sites---------->
+      <!----------javascript---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/5-google_sites.png" class="icon">
+            <img src="content/1-skills/2-web_development/javascript.svg" class="icon">
+          </div>
+          <h3>JavaScript</h3>
+        </div>
+      </div>
+
+      <!----------google sites---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-skills/2-web_development/google_sites.png" class="icon">
           </div>
           <h3>Google Sites</h3>
         </div>
-        <p>Web Design</p>
       </div>
 
-      <!----------6 git---------->
+      <!----------git---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/6-git.svg" class="icon">
+            <img src="content/1-skills/3-development_tools/git.svg" class="icon">
           </div>
           <h3>Git</h3>
         </div>
-        <p>Version Control</p>
       </div>
 
-      <!----------7 github---------->
+      <!----------github---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/7-github.svg" class="icon">
+            <img src="content/1-skills/3-development_tools/github.svg" class="icon">
           </div>
           <h3>Github</h3>
         </div>
-        <p>Version Control</p>
       </div>
 
-      <!----------8 vs code---------->
+      <!----------vs code---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/8-vs_code.svg" class="icon">
+            <img src="content/1-skills/3-development_tools/vs_code.svg" class="icon">
           </div>
           <h3>VS Code</h3>
         </div>
-        <p>Development</p>
       </div>
 
-      <!----------9 excel---------->
+      <!----------eclipse---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/9-eclipse.svg" class="icon">
+            <img src="content/1-skills/3-development_tools/eclipse.svg" class="icon">
           </div>
           <h3>Eclipse</h3>
         </div>
-        <p>Development</p>
       </div>
 
-      <!----------10 word---------->
+      <!----------json---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/10-excel.svg" class="icon">
+            <img src="content/1-skills/4-data_formats/json.png" class="icon">
+          </div>
+          <h3>JSON</h3>
+        </div>
+      </div>
+
+      <!----------excel---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-skills/5-microsoft_office/excel.svg" class="icon">
           </div>
           <h3>Excel</h3>
         </div>
-        <p>Microsoft Office</p>
       </div>
 
-      <!----------11 powerpoint---------->
+      <!----------word---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/11-word.svg" class="icon">
+            <img src="content/1-skills/5-microsoft_office/word.svg" class="icon">
           </div>
           <h3>Word</h3>
         </div>
-        <p>Microsoft Office</p>
       </div>
 
-      <!----------12 notion---------->
+      <!----------powerpoint---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/12-powerpoint.svg" class="icon">
+            <img src="content/1-skills/5-microsoft_office/powerpoint.svg" class="icon">
           </div>
-          <h3>Powerpoint</h3>
+          <h3>PowerPoint</h3>
         </div>
-        <p>Microsoft Office</p>
       </div>
 
-      <!----------13 anki---------->
+      <!----------latex---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/13-notion.svg" class="icon">
-          </div>
-          <h3>Notion</h3>
-        </div>
-        <p>Productivity</p>
-      </div>
-
-      <!----------14 anki---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-icons/1-skills/14-anki.png" class="icon">
-          </div>
-          <h3>Anki</h3>
-        </div>
-        <p>Productivity</p>
-      </div>
-
-      <!----------15 latex---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-icons/1-skills/15-latex.svg" class="icon">
+            <img src="content/1-skills/6-markup_languages/latex.svg" class="icon">
           </div>
           <h3>LaTeX</h3>
         </div>
-        <p>Markup Language</p>
       </div>
 
-      <!----------16 markdown---------->
+      <!----------markdown---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/1-skills/16-markdown.svg" class="icon">
+            <img src="content/1-skills/6-markup_languages/markdown.svg" class="icon">
           </div>
           <h3>Markdown</h3>
         </div>
-        <p>Markup Language</p>
       </div>
+
+      <!----------notion---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-skills/7-productivity_tools/notion.svg" class="icon">
+          </div>
+          <h3>Notion</h3>
+        </div>
+      </div>
+
+      <!----------anki---------->
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/1-skills/7-productivity_tools/anki.png" class="icon">
+          </div>
+          <h3>Anki</h3>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -326,7 +328,7 @@ Description : A website where I present myself and most importantly share the pr
     <div class="icon-box">
       <div class="icon-title">
         <div class="img">
-          <img src="content/1-icons/2-experience/1-mobiblanc.jpeg" class="icon">
+          <img src="content/2-experience/1-mobiblanc.jpeg" class="icon">
         </div>
         <h3>Artificial Intelligence Intern</h3>
       </div>  
@@ -338,7 +340,7 @@ Description : A website where I present myself and most importantly share the pr
     <div class="icon-box">
       <div class="icon-title">
         <div class="img">
-          <img src="content/1-icons/2-experience/2-lafactory.jpeg" class="icon">
+          <img src="content/2-experience/2-lafactory.jpeg" class="icon">
         </div>
         <h3>Startup Accelerrator Intern</h3>
       </div>
@@ -350,7 +352,7 @@ Description : A website where I present myself and most importantly share the pr
     <div class="icon-box">
       <div class="icon-title">
         <div class="img">
-          <img src="content/1-icons/2-experience/3-holomedia.jpeg" class="icon">
+          <img src="content/2-experience/3-holomedia.jpeg" class="icon">
         </div>
         <h3>Marketing Intern</h3>
       </div>
@@ -373,24 +375,24 @@ Description : A website where I present myself and most importantly share the pr
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/3-education/1-ucd.jpeg" class="icon">
+            <img src="content/3-education/1-ucd.jpeg" class="icon">
           </div>
           <h3>University College Dublin (UCD)</h3>
         </div>  
         <h5>Bachelor of Science, Computer Science</h5>
-        <p>Sep 2023 - Present</p>
+        <p>2023...</p>
       </div>
 
       <!----------lyautey---------->
       <div class="icon-box">
         <div class="icon-title">
           <div class="img">
-            <img src="content/1-icons/3-education/2-lyautey.jpeg" class="icon">
+            <img src="content/3-education/2-lyautey.jpeg" class="icon">
           </div>
           <h3>Lycée Lyautey</h3>
         </div>  
         <h5>French Baccalaureate</h5>
-        <p>Sep 2016 - July 2023</p>
+        <p>2016 - 2023</p>
       </div>
 
   </div>

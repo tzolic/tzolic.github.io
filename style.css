@@ -137,6 +137,10 @@ nav ul li a:hover::after{
   width: 100%;
 }
 
+#abdullah-word{
+  color: #0092a2;
+}
+
 #morocco-word{
   color: #C1272D;
 }
@@ -151,6 +155,129 @@ nav ul li a:hover::after{
   font-size: 10vh;
   letter-spacing: 0.5vw;
   line-height: 1.5;
+}
+
+
+
+
+/*----------projects----------*/
+
+.project-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.project{
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.project img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+
+.layer{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.6), #0092a2);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: height 0.5s;
+  overflow: auto;
+}
+
+.img-container{
+  position: relative;
+}
+
+.layer div{
+  position: absolute;
+  display: flex;
+  top: 10%;
+}
+
+.layer img{
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.layer h3{
+  position: absolute;
+  top: 40%;
+  margin: 0 5%;
+  font-weight: 500;
+  font-family: 'Bebas Neue';
+  font-size: 38px;
+}
+
+.layer p{
+  position: absolute;
+  top: 65%;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-size: 20px;
+}
+
+.project:hover > a > img{
+  transform: scale(1.05);
+}
+
+.group-option{
+  font-weight: bold;
+}
+
+.filter-sort-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  width: 100%;
+  align-items: start;
+  box-sizing: border-box;
+}
+
+label{
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#filter-dropdown, #sort-dropdown {
+  width: 200px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #0092a2;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #0092a2;
+  font-size: 16px;
+  appearance: none; /* Remove default arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 width%3D%2710%27 height%3D%275%27 viewBox%3D%270 0 10 5%27%3E%3Cpath fill%3D%27%230092a2%27 d%3D%27M0 0l5 5 5-5H0z%27/%3E%3C/svg%3E'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  cursor: pointer;
 }
 
 /*----------about part1----------*/
@@ -219,10 +346,6 @@ blockquote::before{
   top:-10px;
 }
 
-blockquote::after{
-  content: '';
-}
-
 /*----------about part2----------*/
 
 .tab-titles{
@@ -240,6 +363,7 @@ blockquote::after{
   font-size: 40px;
   font-family: 'Bebas Neue';
   margin: 0 auto;
+  text-align: center;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -279,7 +403,7 @@ blockquote::after{
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 3rem 80px;
+  margin-top: 5%;
   font-size: 1.2rem;
 }
 
@@ -290,7 +414,6 @@ blockquote::after{
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 3rem 80px;
   font-size: 1.2rem;
 }
 
@@ -301,18 +424,11 @@ blockquote::after{
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 3rem 80px;
   font-size: 1.2rem;
 }
 
 .icon-box{
   padding: 1rem;
-  color: #ddd;
-  cursor: pointer;
-}
-
-.icon-box p{
-  font-size: 12px;
 }
 
 .icon-box:hover > .icon-title:after, .icon-box:hover > .icon-title:before{
@@ -328,7 +444,6 @@ blockquote::after{
   flex-direction: column;
   align-items: center;
   padding: 0.5rem;
-  margin-bottom: 0.5rem;
   position: relative;
 }
 
@@ -382,93 +497,35 @@ blockquote::after{
 }
 
 .icon-title h3{
+  margin-top: 20px;
+  font-size: 25px;
   color: #fff;
-  margin-top: 0.5rem;
+  text-shadow:
+  0 0 5px #0092a2,
+  0 0 10px #0092a2,
+  0 0 15px #0092a2,
+  0 0 20px #0092a2,
+  0 0 35px #0092a2,
+  0 0 40px #0092a2,
+  0 0 75px #0092a2;
 }
+
+.icon-box h5{
+  margin-top: 10px;
+  font-size: 20px;
+  color: #fff
+}
+
+.icon-box p{
+  margin-top: 10px;
+  font-size: 15px;
+  color: #fff;
+}
+
 
 .icon{
   width: 60px;
   z-index: 2;
-}
-
-
-/*----------projects----------*/
-
-.project-list{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
-  margin-top: 50px;
-}
-
-.project{
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.project img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-  transition: transform 0.5s;
-}
-
-.layer{
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.6), #0092a2);
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  transition: height 0.5s;
-  overflow: auto;
-}
-
-.img-container{
-  position: relative;
-}
-
-.layer div{
-  position: absolute;
-  display: flex;
-  top: 10%;
-}
-
-.layer img{
-  width: 60px;
-  height: 60px;
-  margin: 0 2.5%;
-}
-
-.layer h3{
-  position: absolute;
-  top: 40%;
-  margin: 0 5%;
-  font-weight: 500;
-  font-family: 'Bebas Neue';
-  font-size: 38px;
-}
-
-.layer p{
-  position: absolute;
-  top: 65%;
-  margin-right: 5%;
-  margin-left: 5%;
-  font-size: 20px;
-}
-
-.project:hover > img{
-  transform: scale(1.1);
 }
 
 
@@ -607,6 +664,13 @@ nav .fa-solid{
   }
 }
 
+@media only screen and (max-width: 800px){
+  .tab-links{
+    font-size: 25px;
+    margin-right: 20px;
+  }
+}
+
 
 @media only screen and (max-width: 675px){
 
@@ -620,11 +684,6 @@ nav .fa-solid{
 
   .about-col-1, .about-col-2{
     flex-basis: 100%;
-  }
-
-  .tab-links{
-    font-size: 20px;
-    margin-right: 20px;
   }
 
   .skills-container,.experience-container,.education-container{
