@@ -61,29 +61,36 @@ Description : A website where I present myself and most importantly share the pr
   <h1 class="title top-space">Featured Projects</h1>
 
   <div class="filter-sort-container">
-    <!----------filter dropdown---------->
-      <label for="filter-dropdown">Filter by Skill:</label>
-      <select id="filter-dropdown">
-
-        <option value="All" class="group-option">All</option>
-
-        <!----------backend---------->
-        <option value="Backend" class="group-option">Backend</option>
-        <option value="C">C</option>
-
-        <!----------frontend---------->
-        <option value="Frontend" class="group-option">Frontend</option>
-        <option value="HTML & CSS">HTML & CSS</option>
-        <option value="JavaScript">JavaScript</option>
-
-      </select>
 
     <!----------sort dropdown---------->
-    <label for="sort-dropdown">Sort by date:</label>
-    <select id="sort-dropdown">
-      <option value="doneDateDesc">Newest First</option>
-      <option value="doneDateAsc">Oldest First</option>
-    </select>
+    <div class="filter-sort-container-1">
+      <label for="sort-dropdown">Sort by date:</label>
+      <select id="sort-dropdown">
+        <option value="doneDateDesc">Newest First</option>
+        <option value="doneDateAsc">Oldest First</option>
+      </select>
+    </div>
+    
+
+      <!----------filter dropdown---------->
+      <div class="filter-sort-container-2">
+        <label for="filter-dropdown">Filter by skill:</label>
+        <select id="filter-dropdown">
+  
+          <option value="All" class="group-option">All</option>
+  
+          <!----------backend---------->
+          <option value="Backend" class="group-option">Backend</option>
+          <option value="C">C</option>
+  
+          <!----------frontend---------->
+          <option value="Frontend" class="group-option">Frontend</option>
+          <option value="HTML & CSS">HTML & CSS</option>
+          <option value="JavaScript">JavaScript</option>
+  
+        </select>
+      </div>
+     
   </div>
   
 
@@ -325,41 +332,47 @@ Description : A website where I present myself and most importantly share the pr
   <!----------experience---------->
 
     <!----------mobiblanc---------->
-    <div class="icon-box">
-      <div class="icon-title">
-        <div class="img">
-          <img src="content/2-experience/1-mobiblanc.jpeg" class="icon">
-        </div>
-        <h3>Artificial Intelligence Intern</h3>
-      </div>  
-      <h5>Mobiblanc</h5>
-      <p>Jul 2022</p>
-    </div>
+    <a href="https://www.mobiblanc.com/" class="icon-box-link">
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/2-experience/1-mobiblanc.jpeg" class="icon">
+          </div>
+          <h3>Artificial Intelligence Intern</h3>
+        </div>  
+        <h5>Mobiblanc</h5>
+        <p>Jul 2022</p>
+      </div>
+    </a>
 
     <!----------lafactory---------->
-    <div class="icon-box">
-      <div class="icon-title">
-        <div class="img">
-          <img src="content/2-experience/2-lafactory.jpeg" class="icon">
+    <a href="https://www.lastartupstation.co/" class="icon-box-link">
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/2-experience/2-la_startup_station.jpeg" class="icon">
+          </div>
+          <h3>Startup Accelerrator Intern</h3>
         </div>
-        <h3>Startup Accelerrator Intern</h3>
+        <h5>LaStartupStation</h5>
+        <p>Dec 2019</p>
       </div>
-      <h5>LaFactory</h5>
-      <p>Dec 2019</p>
-    </div>
+    </a>
 
     <!----------holomedia---------->
-    <div class="icon-box">
-      <div class="icon-title">
-        <div class="img">
-          <img src="content/2-experience/3-holomedia.jpeg" class="icon">
+    <a href="https://www.holomedia.ma/" class="icon-box-link">
+      <div class="icon-box">
+        <div class="icon-title">
+          <div class="img">
+            <img src="content/2-experience/3-holomedia.jpeg" class="icon">
+          </div>
+          <h3>Marketing Intern</h3>
         </div>
-        <h3>Marketing Intern</h3>
+        <h5>HoloMedia</h5>
+        <p>Oct 2019</p>
       </div>
-      <h5>HoloMedia</h5>
-      <p>Oct 2019</p>
-    </div>
-
+    </a>
+    
   </div>
 </div>
 
@@ -372,28 +385,32 @@ Description : A website where I present myself and most importantly share the pr
     <!----------education---------->
   
       <!----------ucd---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/3-education/1-ucd.jpeg" class="icon">
-          </div>
-          <h3>University College Dublin (UCD)</h3>
-        </div>  
-        <h5>Bachelor of Science, Computer Science</h5>
-        <p>2023...</p>
-      </div>
+      <a href="https://www.ucd.ie/" class="icon-box-link">
+        <div class="icon-box">
+          <div class="icon-title">
+            <div class="img">
+              <img src="content/3-education/1-ucd.jpeg" class="icon">
+            </div>
+            <h3>University College Dublin (UCD)</h3>
+          </div>  
+          <h5>Bachelor of Science, Computer Science</h5>
+          <p>2023...</p>
+        </div>
+      </a>
 
       <!----------lyautey---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/3-education/2-lyautey.jpeg" class="icon">
-          </div>
-          <h3>Lycée Lyautey</h3>
-        </div>  
-        <h5>French Baccalaureate</h5>
-        <p>2016 - 2023</p>
-      </div>
+      <a href="https://www.lyceelyautey.org/" class="icon-box-link">
+        <div class="icon-box">
+          <div class="icon-title">
+            <div class="img">
+              <img src="content/3-education/2-lyautey.jpeg" class="icon">
+            </div>
+            <h3>Lycée Lyautey</h3>
+          </div>  
+          <h5>French Baccalaureate</h5>
+          <p>2016 - 2023</p>
+        </div>
+      </a>
 
   </div>
 </div>

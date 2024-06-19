@@ -4,16 +4,50 @@ var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
 function opentab(tabname){
+  //remove old tab classes
   for(tablink of tablinks){
     tablink.classList.remove("active-link");
   }
   for(tabcontent of tabcontents){
     tabcontent.classList.remove("active-tab");
   }
+
+  //add active tab classes
   event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
+
+  //store the active tab in localStorage
+  localStorage.setItem("activeTab", tabname);
 }
 
+// Function to retrieve active tab from localStorage
+function setActiveTabFromStorage() {
+  let activeTab = localStorage.getItem("activeTab");
+  
+  if(activeTab){
+    for (let tablink of tablinks){
+      tablink.classList.remove("active-link");
+      if (tablink.getAttribute("onclick").includes(activeTab)){
+        tablink.classList.add("active-link");
+      }
+    }
+    for (let tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+      if (tabcontent.id === activeTab){
+        tabcontent.classList.add("active-tab");
+      }
+    }
+  }
+}
+
+// Call setActiveTabFromStorage on page load
+document.addEventListener("DOMContentLoaded", function(){
+  setActiveTabFromStorage();
+});
+
+
+
+/*----------sidemenu----------*/
 
 var sidemenu = document.getElementById("sidemenu");
 
@@ -132,7 +166,7 @@ async function filterAndSortProjects(){
 
     projectDiv.innerHTML =
     `
-    <a href="${project.link}" target="_blank">
+    <a href="${project.link}">
       <img src= "${project.coverSrc}" alt="${project.name} cover">
       <div class="layer">
         <div>
