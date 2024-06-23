@@ -2,7 +2,6 @@
   {
     "doneDate": "06/06/2024",
     "name": "Heart Health Program",
-    "description": "A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score.",
     "coverSrc": "projects_cover/1-heart_health_program.png",
     "skills": ["C"],
     "skillSrc": ["content/1-skills/1-programming_languages/c.svg"],

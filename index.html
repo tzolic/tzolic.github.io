@@ -17,9 +17,11 @@ Description : A website where I present myself and most importantly share the pr
 </head>
 
 <body>
-
-<!----------header---------->
-<div id="background">
+  
+<canvas></canvas>
+<!----------home---------->
+<div class="home">
+  <!----------menu---------->
   <div class="container" id="home">
     <nav id="index">
       <a class="logo">
@@ -34,23 +36,27 @@ Description : A website where I present myself and most importantly share the pr
       </ul>
       <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
-
-
-
-
-
-    <div class="header-text">
-      <p>Computer Science Student <span style="color: #0092a2">@</span> UCD</p>
-      <h1>Hi, I'm <span id="abdullah-word">Abdullah</span> <br> From <span id="morocco-word" >Morocco</span></h1>
-    </div>
     
+
+
+
+    <!----------home content---------->
+    <div class="home-content">
+
+      <div class="home-img">
+        <img src="content/background.png" alt="">
+      </div>
+
+      <div class="home-text">
+        <h1>Hi, I'm <strong>Abdullah</strong></h1>
+        <p>This is my <strong>portfolio</strong> where I show stuff I build with my keyboard and my mouse.</p>
+        <p>I'm a <strong>computer science student</strong> @ UCD.</p>
+      </div>
+
+    </div>
+
   </div>
 </div>
-
-
-
-
-
 
 
 
@@ -71,34 +77,29 @@ Description : A website where I present myself and most importantly share the pr
       </select>
     </div>
     
+    <!----------filter dropdown---------->
+    <div class="filter-sort-container-2">
+      <label for="filter-dropdown">Filter by skill:</label>
+      <select id="filter-dropdown">
 
-      <!----------filter dropdown---------->
-      <div class="filter-sort-container-2">
-        <label for="filter-dropdown">Filter by skill:</label>
-        <select id="filter-dropdown">
-  
-          <option value="All" class="group-option">All</option>
-  
-          <!----------backend---------->
-          <option value="Backend" class="group-option">Backend</option>
-          <option value="C">C</option>
-  
-          <!----------frontend---------->
-          <option value="Frontend" class="group-option">Frontend</option>
-          <option value="HTML & CSS">HTML & CSS</option>
-          <option value="JavaScript">JavaScript</option>
-  
-        </select>
-      </div>
-     
+        <option value="All" class="group-option">All</option>
+
+        <!----------backend---------->
+        <option value="Backend" class="group-option">Backend</option>
+        <option value="C">C</option>
+
+        <!----------frontend--------
+        <option value="Frontend" class="group-option">Frontend</option>
+        -->
+      </select>
+    </div>
+
   </div>
-  
 
-
-
-  <div class="project-list">
-    <!----------dynamic projects---------->      
+  <!----------dynamic projects---------->
+  <div class="project-list">     
   </div>
+
 </div>
 
 
@@ -115,205 +116,210 @@ Description : A website where I present myself and most importantly share the pr
 
     <div class="about-col-2">
       <h1 class="title" id="title-about-me">About Me</h1>
+
       <p id="text-location">
         <i class="fa-solid fa-location-dot"></i> Dublin, Ireland
       </p>
+
       <p id="about-text">
         With a thirst for <span style="color: #0092a2"><b>knowledge</b></span> and a love for <span style="color: #0092a2"><b>problem-solving</b></span>, <br>
         I'm dedicated to exploring the dynamic realm of technology and constantly seeking new opportunities for <span style="color: #0092a2"><b>growth</b></span>.
       </p>
+
       <blockquote>
         Success is walking from failure to failure with no loss of enthusiasm.
       </blockquote>
+
     </div>
+
   </div>
 
+  <!----------tabs---------->
   <div class="tab-titles">
     <p class="tab-links active-link" onclick="opentab('skills')">Skills<i class="fa-solid fa-star"></i></p>
     <p class="tab-links" onclick="opentab('experience')">Experience<i class="fa-solid fa-circle-check"></i></p>
     <p class="tab-links" onclick="opentab('education')">Education<i class="fa-solid fa-graduation-cap"></i></p>
   </div>
 
-  <div class="tab-contents active-tab" id="skills">
-
-    <!----------skills---------->
+  <!----------skills---------->
+  <div class="tab-contents active-tab" id="skills"> 
     <div class="skills-container">
 
       <!----------c---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/1-programming_languages/c.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/1-programming_languages/c.svg" class="icon-skills">
           </div>
           <h3>C</h3>
         </div>
       </div>
 
       <!----------python---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/1-programming_languages/python.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/1-programming_languages/python.svg" class="icon-skills">
           </div>
           <h3>Python</h3>
         </div>
       </div>
 
       <!----------html---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/2-web_development/html.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/2-web_development/html.svg" class="icon-skills">
           </div>
           <h3>HTML 5</h3>
         </div>
       </div>
 
       <!----------css---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/2-web_development/css.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/2-web_development/css.svg" class="icon-skills">
           </div>
           <h3>CSS</h3>
         </div>
       </div>
 
       <!----------javascript---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/2-web_development/javascript.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/2-web_development/javascript.svg" class="icon-skills">
           </div>
           <h3>JavaScript</h3>
         </div>
       </div>
 
       <!----------google sites---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/2-web_development/google_sites.png" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/2-web_development/google_sites.png" class="icon-skills">
           </div>
           <h3>Google Sites</h3>
         </div>
       </div>
 
       <!----------git---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/3-development_tools/git.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/3-development_tools/git.svg" class="icon-skills">
           </div>
           <h3>Git</h3>
         </div>
       </div>
 
       <!----------github---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/3-development_tools/github.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/3-development_tools/github.svg" class="icon-skills">
           </div>
           <h3>Github</h3>
         </div>
       </div>
 
       <!----------vs code---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/3-development_tools/vs_code.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/3-development_tools/vs_code.svg" class="icon-skills">
           </div>
           <h3>VS Code</h3>
         </div>
       </div>
 
       <!----------eclipse---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/3-development_tools/eclipse.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/3-development_tools/eclipse.svg" class="icon-skills">
           </div>
           <h3>Eclipse</h3>
         </div>
       </div>
 
       <!----------json---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/4-data_formats/json.png" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/4-data_formats/json.png" class="icon-skills">
           </div>
           <h3>JSON</h3>
         </div>
       </div>
 
       <!----------excel---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/5-microsoft_office/excel.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/5-microsoft_office/excel.svg" class="icon-skills">
           </div>
           <h3>Excel</h3>
         </div>
       </div>
 
       <!----------word---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/5-microsoft_office/word.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/5-microsoft_office/word.svg" class="icon-skills">
           </div>
           <h3>Word</h3>
         </div>
       </div>
 
       <!----------powerpoint---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/5-microsoft_office/powerpoint.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/5-microsoft_office/powerpoint.svg" class="icon-skills">
           </div>
           <h3>PowerPoint</h3>
         </div>
       </div>
 
       <!----------latex---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/6-markup_languages/latex.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/6-markup_languages/latex.svg" class="icon-skills">
           </div>
           <h3>LaTeX</h3>
         </div>
       </div>
 
-      <!----------markdown---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/6-markup_languages/markdown.svg" class="icon">
+      <!----------latex---------->
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/6-markup_languages/markdown.svg" class="icon-skills">
           </div>
           <h3>Markdown</h3>
         </div>
       </div>
 
       <!----------notion---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/7-productivity_tools/notion.svg" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/7-productivity_tools/notion.svg" class="icon-skills">
           </div>
           <h3>Notion</h3>
         </div>
       </div>
 
       <!----------anki---------->
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/1-skills/7-productivity_tools/anki.png" class="icon">
+      <div class="icon-box-skills">
+        <div class="icon-title-skills">
+          <div class="img-skills">
+            <img src="content/1-skills/7-productivity_tools/anki.png" class="icon-skills">
           </div>
           <h3>Anki</h3>
         </div>
@@ -321,105 +327,98 @@ Description : A website where I present myself and most importantly share the pr
 
     </div>
   </div>
-</div>
 
 
 
 
 
-<div class="tab-contents" id="experience">
-  <div class="experience-container">
   <!----------experience---------->
-
-    <!----------mobiblanc---------->
-    <a href="https://www.mobiblanc.com/" class="icon-box-link">
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/2-experience/1-mobiblanc.jpeg" class="icon">
-          </div>
-          <h3>Artificial Intelligence Intern</h3>
-        </div>  
-        <h5>Mobiblanc</h5>
-        <p>Jul 2022</p>
-      </div>
-    </a>
-
-    <!----------lafactory---------->
-    <a href="https://www.lastartupstation.co/" class="icon-box-link">
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/2-experience/2-la_startup_station.jpeg" class="icon">
-          </div>
-          <h3>Startup Accelerrator Intern</h3>
-        </div>
-        <h5>LaStartupStation</h5>
-        <p>Dec 2019</p>
-      </div>
-    </a>
-
-    <!----------holomedia---------->
-    <a href="https://www.holomedia.ma/" class="icon-box-link">
-      <div class="icon-box">
-        <div class="icon-title">
-          <div class="img">
-            <img src="content/2-experience/3-holomedia.jpeg" class="icon">
-          </div>
-          <h3>Marketing Intern</h3>
-        </div>
-        <h5>HoloMedia</h5>
-        <p>Oct 2019</p>
-      </div>
-    </a>
+  <div class="tab-contents" id="experience">
+    <div class="experience-container">
     
-  </div>
-</div>
-
-
-
-
-
-<div class="tab-contents" id="education">
-  <div class="education-container">
-    <!----------education---------->
-  
-      <!----------ucd---------->
-      <a href="https://www.ucd.ie/" class="icon-box-link">
+      <!----------mobiblanc---------->
+      <a href="https://www.mobiblanc.com/" class="icon-box-link">
         <div class="icon-box">
           <div class="icon-title">
             <div class="img">
-              <img src="content/3-education/1-ucd.jpeg" class="icon">
+              <img src="content/2-experience/1-mobiblanc.jpeg" class="icon">
             </div>
-            <h3>University College Dublin (UCD)</h3>
+            <h3>Artificial Intelligence Intern</h3>
           </div>  
-          <h5>Bachelor of Science, Computer Science</h5>
-          <p>2023...</p>
+          <h5>Mobiblanc</h5>
+          <p>Jul 2022</p>
         </div>
       </a>
 
-      <!----------lyautey---------->
-      <a href="https://www.lyceelyautey.org/" class="icon-box-link">
+      <!----------lafactory---------->
+      <a href="https://www.lastartupstation.co/" class="icon-box-link">
         <div class="icon-box">
           <div class="icon-title">
             <div class="img">
-              <img src="content/3-education/2-lyautey.jpeg" class="icon">
+              <img src="content/2-experience/2-la_startup_station.jpeg" class="icon">
             </div>
-            <h3>Lycée Lyautey</h3>
-          </div>  
-          <h5>French Baccalaureate</h5>
-          <p>2016 - 2023</p>
+            <h3>Startup Accelerrator Intern</h3>
+          </div>
+          <h5>LaStartupStation</h5>
+          <p>Dec 2019</p>
         </div>
       </a>
 
+      <!----------holomedia---------->
+      <a href="https://www.holomedia.ma/" class="icon-box-link">
+        <div class="icon-box">
+          <div class="icon-title">
+            <div class="img">
+              <img src="content/2-experience/3-holomedia.jpeg" class="icon">
+            </div>
+            <h3>Marketing Intern</h3>
+          </div>
+          <h5>HoloMedia</h5>
+          <p>Oct 2019</p>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+
+
+
+
+  <!----------education---------->
+  <div class="tab-contents" id="education">
+    <div class="education-container">
+    
+        <!----------ucd---------->
+        <a href="https://www.ucd.ie/" class="icon-box-link">
+          <div class="icon-box">
+            <div class="icon-title">
+              <div class="img">
+                <img src="content/3-education/1-ucd.jpeg" class="icon">
+              </div>
+              <h3>University College Dublin (UCD)</h3>
+            </div>  
+            <h5>Bachelor of Science, Computer Science</h5>
+            <p>2023...</p>
+          </div>
+        </a>
+
+        <!----------lyautey---------->
+        <a href="https://www.lyceelyautey.org/" class="icon-box-link">
+          <div class="icon-box">
+            <div class="icon-title">
+              <div class="img">
+                <img src="content/3-education/2-lyautey.jpeg" class="icon">
+              </div>
+              <h3>Lycée Lyautey</h3>
+            </div>  
+            <h5>French Baccalaureate</h5>
+            <p>2016 - 2023</p>
+          </div>
+        </a>
+
+    </div>
   </div>
 </div>
-
-
-
-
-
-
 
 
 
@@ -430,11 +429,16 @@ Description : A website where I present myself and most importantly share the pr
 
     <div class="contact-left">
       <h1 class="title">Contact Me</h1>
-      <p> <i class="fa-solid fa-envelope"></i> aihduty@gmail.com</p> 
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        <span class="email">aihduty@gmail.com</span>
+      </p>
+
       <div class="social-icons">
         <a href="https://github.com/tzolic"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/abdullah-iraqi-houssaini/"><i class="fa-brands fa-linkedin"></i></a>
       </div>
+
     </div>
 
     <div class="contact-right">
@@ -448,7 +452,6 @@ Description : A website where I present myself and most importantly share the pr
     </div>
 
   </div>
-
 </div>
 
 
@@ -460,9 +463,6 @@ Description : A website where I present myself and most importantly share the pr
 
 
 
-
 <script src="script.js"></script>
-
 </body>
-
 </html>

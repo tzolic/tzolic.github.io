@@ -1,5 +1,73 @@
-/*----------skills, experience, education----------*/
+/*----------matrix rain----------*/
+// Initialising the canvas
+var canvas = document.querySelector('canvas'),
+    ctx = canvas.getContext('2d');
 
+// Setting the width and height of the canvas
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Setting up the letters
+var letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ';
+letters = letters.split('');
+
+// Setting up the columns
+var fontSize = 10,
+    columns = canvas.width / fontSize;
+
+// Setting up the drops
+var drops = [];
+for (var i = 0; i < columns; i++) {
+  drops[i] = 1;
+}
+
+// Setting up the draw function
+function draw() {
+  ctx.fillStyle = 'rgba(0, 0, 0, .1)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  for (var i = 0; i < drops.length; i++) {
+    var text = letters[Math.floor(Math.random() * letters.length)];
+    ctx.fillStyle = '#0092a2';
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+    drops[i]++;
+    if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
+      drops[i] = 0;
+    }
+  }
+}
+
+// Loop the animation
+setInterval(draw, 33);
+
+
+
+
+
+/*----------sidemenu----------*/
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+  sidemenu.style.right = "0";
+}
+function closemenu(){
+  sidemenu.style.right = "-200px";
+}
+
+
+
+
+/*---------navbar scroll----------*/
+window.addEventListener("scroll", function(){
+  var nav = document.querySelector("nav");
+  nav.classList.toggle("sticky", window.scrollY > 0);
+})
+
+
+
+
+
+/*----------skills, experience, education----------*/
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -20,7 +88,7 @@ function opentab(tabname){
   localStorage.setItem("activeTab", tabname);
 }
 
-// Function to retrieve active tab from localStorage
+//function to retrieve active tab from localStorage
 function setActiveTabFromStorage() {
   let activeTab = localStorage.getItem("activeTab");
   
@@ -40,27 +108,16 @@ function setActiveTabFromStorage() {
   }
 }
 
-// Call setActiveTabFromStorage on page load
+//call setActiveTabFromStorage on page load
 document.addEventListener("DOMContentLoaded", function(){
   setActiveTabFromStorage();
 });
 
 
 
-/*----------sidemenu----------*/
-
-var sidemenu = document.getElementById("sidemenu");
-
-function openmenu(){
-  sidemenu.style.right = "0";
-}
-function closemenu(){
-  sidemenu.style.right = "-200px";
-}
 
 
 /*----------contact----------*/
-
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyD-y04o3K1tzcjK03M_zqa8LyT4xczQWOeuFxmpWtIB9qdarz_4UvfBkbrs_STDz1O/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
@@ -92,19 +149,7 @@ form.addEventListener('submit', e => {
 
 
 
-
-/*---------navbar scroll----------*/
-
-window.addEventListener("scroll", function(){
-  var nav = document.querySelector("nav");
-  nav.classList.toggle("sticky", window.scrollY > 0);
-})
-
-
-
-
-/*----------projects filter & sort----------*/
-
+/*----------projects sort & filter----------*/
 //function to fetch projects from JSON asynchronously
 async function fetchProjects(){
   try {
@@ -134,7 +179,7 @@ async function filterAndSortProjects(){
   // Define the mapping of group options to multiple skills
   const skillGroups = {
     Backend: ['C'],
-    Frontend: ['HTML & CSS', 'JavaScript']
+    Frontend: ['', '']
   };
 
   //filter projects based on selected skill
@@ -167,15 +212,12 @@ async function filterAndSortProjects(){
     projectDiv.innerHTML =
     `
     <a href="${project.link}">
-      <img src= "${project.coverSrc}" alt="${project.name} cover">
+      <img src= "${project.coverSrc}" alt="${project.name} cover" class="project-cover">
       <div class="layer">
         <div>
           ${project.skillSrc.map(skillSrc => `<img src="${skillSrc}" alt="skill icon">`).join('')}
         </div>
         <h3>${project.name}</h3>
-        <p>
-          ${project.description}
-        </p>
       </div>
     </a>
     `;
