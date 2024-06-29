@@ -450,12 +450,13 @@ label{
 }
 
 video{
+  margin: 0 auto;
+  margin-top: 5vh;
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 100%;
   display: block;
-  margin: 0 auto;
 }
 
 .project-button{
@@ -464,7 +465,8 @@ video{
   display: flex;
 
   color: #fff;
-  margin: 5vh auto;
+  margin: 0 auto;
+  margin-top: 5vh;
   width: 50vw;
   font-weight: bold;
   font-size: 40px;
