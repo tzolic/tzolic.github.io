@@ -417,13 +417,13 @@ label{
 
   color: #fff;
   text-shadow:
-    0 0 2.5px #33b249,
-    0 0 5px #33b249,
-    0 0 10px #33b249,
-    0 0 15px #33b249,
-    0 0 17.5px #33b249,
-    0 0 20px #33b249,
-    0 0 37.5px #33b249;
+    0 0 2.5px #0041A2,
+    0 0 5px #0041A2,
+    0 0 10px #0041A2,
+    0 0 15px #0041A2,
+    0 0 17.5px #0041A2,
+    0 0 20px #0041A2,
+    0 0 37.5px #0041A2;
 }
 
 .project-sub-header{
@@ -434,13 +434,13 @@ label{
   margin-bottom: 30px;
 
   text-shadow:
-    0 0 2.5px #0047AB,
-    0 0 5px #0047AB,
-    0 0 10px #0047AB,
-    0 0 15px #0047AB,
-    0 0 17.5px #0047AB,
-    0 0 20px #0047AB,
-    0 0 37.5px #0047AB;
+    0 0 2.5px #00A261,
+    0 0 5px #00A261,
+    0 0 10px #00A261,
+    0 0 15px #00A261,
+    0 0 17.5px #00A261,
+    0 0 20px #00A261,
+    0 0 37.5px #00A261;
 }
 
 .answer{
@@ -479,7 +479,7 @@ video{
 }
 
 .project-button:hover {
-  background-color: #33b249;
+  background-color: #00A261;
   transform: scale(1.05);
 }
 
@@ -875,7 +875,7 @@ blockquote::before{
 }
 
 .contact-button:hover{
-  background: #33b249;
+  background: #00A261;
 }
 
 .contact-left{
