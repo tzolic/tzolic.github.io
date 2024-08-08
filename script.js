@@ -66,57 +66,6 @@ window.addEventListener("scroll", function(){
 
 
 
-
-/*----------skills, experience, education----------*/
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
-
-function opentab(tabname){
-  //remove old tab classes
-  for(tablink of tablinks){
-    tablink.classList.remove("active-link");
-  }
-  for(tabcontent of tabcontents){
-    tabcontent.classList.remove("active-tab");
-  }
-
-  //add active tab classes
-  event.currentTarget.classList.add("active-link");
-  document.getElementById(tabname).classList.add("active-tab");
-
-  //store the active tab in localStorage
-  localStorage.setItem("activeTab", tabname);
-}
-
-//function to retrieve active tab from localStorage
-function setActiveTabFromStorage() {
-  let activeTab = localStorage.getItem("activeTab");
-  
-  if(activeTab){
-    for (let tablink of tablinks){
-      tablink.classList.remove("active-link");
-      if (tablink.getAttribute("onclick").includes(activeTab)){
-        tablink.classList.add("active-link");
-      }
-    }
-    for (let tabcontent of tabcontents){
-      tabcontent.classList.remove("active-tab");
-      if (tabcontent.id === activeTab){
-        tabcontent.classList.add("active-tab");
-      }
-    }
-  }
-}
-
-//call setActiveTabFromStorage on page load
-document.addEventListener("DOMContentLoaded", function(){
-  setActiveTabFromStorage();
-});
-
-
-
-
-
 /*----------contact----------*/
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyD-y04o3K1tzcjK03M_zqa8LyT4xczQWOeuFxmpWtIB9qdarz_4UvfBkbrs_STDz1O/exec'
 const form = document.forms['submit-to-google-sheet']
