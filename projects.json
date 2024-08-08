@@ -2,11 +2,21 @@
   {
     "doneDate": "06/06/2024",
     "name": "Heart Health Program",
-    "cover": "content/heart.png",
+    "cover": "content/cover/heart_health_program.png",
     "skill": ["C"],
-    "skillCover": ["content/1-skills/1-programming_languages/c.svg"],
+    "skillCover": ["content/skill/c.svg"],
     "demoLink": "https://onlinegdb.com/qvB1FkvDV",
     "codeLink": "https://github.com/tzolic/heart_health_program?tab=readme-ov-file",
     "description": "A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score."
+  },
+  {
+    "doneDate": "29/06/2024",
+    "name": "Weekly Gantt Chart",
+    "cover": "content/cover/weekly_gantt_chart.png",
+    "skill": ["C"],
+    "skillCover": ["content/skill/c.svg"],
+    "demoLink": "https://onlinegdb.com/7F5SyrTRM",
+    "codeLink": "https://github.com/tzolic/weekly_gantt_chart?tab=readme-ov-file",
+    "description": "A gantt chart generator that helps you visualize and manage the schedule and dependencies of tasks within a weekly project."
   }
 ]

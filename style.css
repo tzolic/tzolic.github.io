@@ -243,7 +243,7 @@ nav ul li{
 }
 
 nav ul li a{
-  font-size: 20px;
+  font-size: 1.5em;
   position: relative;
   margin: 0 15px;
   text-decoration: none;
@@ -1252,18 +1252,6 @@ nav .fa-solid{
 
 
 /*----------logo----------*/
-@media only screen and (max-width: 500px) and (min-width: 300px){
-  nav .logo{
-    font-size: 1.5em;
-  }
-}
-
-@media only screen and (max-width: 300px){
-  nav .logo{
-    font-size: 1em;
-  }
-}
-
 @media only screen and (min-width: 330px) and (max-width: 800px){
   .result > p{
     font-size: 20px;
