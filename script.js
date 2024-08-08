@@ -176,12 +176,6 @@ async function filterAndSortProjects(){
   const sortOrder = document.getElementById('sort-dropdown').value;
   const projects = await fetchProjects();
 
-  // Define the mapping of group options to multiple skills
-  const skillGroups = {
-    Backend: ['C'],
-    Frontend: ['', '']
-  };
-
   //filter projects based on selected skill
   let filteredProjects = projects;
   if (selectedSkill !== 'All') {
@@ -207,19 +201,25 @@ async function filterAndSortProjects(){
 
   filteredProjects.forEach(project =>{
     const projectDiv = document.createElement('div');
-    projectDiv.classList.add('project');
 
     projectDiv.innerHTML =
     `
-    <a href="${project.link}">
-      <img src= "${project.coverSrc}" alt="${project.name} cover" class="project-cover">
-      <div class="layer">
-        <div>
-          ${project.skillSrc.map(skillSrc => `<img src="${skillSrc}" alt="skill icon">`).join('')}
-        </div>
-        <h3>${project.name}</h3>
+    <div class="project">
+      <div class="img-div">
+        <img src="${project.cover}" alt="${project.name} cover" class="project-cover">
       </div>
-    </a>
+      <div class="text-div">
+        <h3>${project.name}</h3>
+        <div class="project-skills">
+          ${project.skillCover.map(skillCover => `<img src="${skillCover}" class="skill-icon">`).join('')}
+        </div>
+        <p class="project-description">${project.description}</p>
+      </div>
+      <div class="button-div">
+        <a href="${project.demoLink}" class="btn demo-btn"> <i class="fas fa-play"></i> Demo</a>
+        <a href="${project.codeLink}" class="btn code-btn"> <i class="fas fa-code"></i> Code</a>
+      </div>
+    </div>
     `;
     
     projectList.appendChild(projectDiv);

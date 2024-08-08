@@ -2,17 +2,11 @@
   {
     "doneDate": "06/06/2024",
     "name": "Heart Health Program",
-    "coverSrc": "projects_cover/1-heart_health_program.png",
-    "skills": ["C"],
-    "skillSrc": ["content/1-skills/1-programming_languages/c.svg"],
-    "link": "1-heart_health_program.html"
-  },
-  {
-    "doneDate": "29/06/2024",
-    "name": "Weekly Gantt Chart",
-    "coverSrc": "projects_cover/2-weekly_gantt_chart.png",
-    "skills": ["C"],
-    "skillSrc": ["content/1-skills/1-programming_languages/c.svg"],
-    "link": "2-weekly_gantt_chart.html"
+    "cover": "content/heart.png",
+    "skill": ["C"],
+    "skillCover": ["content/1-skills/1-programming_languages/c.svg"],
+    "demoLink": "https://onlinegdb.com/qvB1FkvDV",
+    "codeLink": "https://github.com/tzolic/heart_health_program?tab=readme-ov-file",
+    "description": "A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score."
   }
 ]
