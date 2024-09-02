@@ -166,11 +166,11 @@ async function filterAndSortProjects(){
       </div>
       <div class="button-div">
         <a href="${project.demoLink}" class="btn demo-btn"> <i class="fas fa-play"></i> Demo</a>
-        <a href="${project.codeLink}" class="btn code-btn"> <i class="fa-brands fa-github"></i> Code</a>
+        ${project.codeLink ? `<a href="${project.codeLink}" class="btn code-btn"> <i class="fa-brands fa-github"></i> Code</a>` : ''}
       </div>
     </div>
     `;
-    
+
     projectList.appendChild(projectDiv);
   });
 }
