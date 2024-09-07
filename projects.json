@@ -3,7 +3,7 @@
     "doneDate": "06/06/2024",
     "name": "Heart Health Program",
     "cover": "content/cover/heart_health_program.png",
-    "skill": ["C", "lol"],
+    "skill": ["C"],
     "skillCover": ["content/skill/c.svg"],
     "demoLink": "https://onlinegdb.com/qvB1FkvDV",
     "codeLink": "https://github.com/tzolic/heart_health_program?tab=readme-ov-file",
