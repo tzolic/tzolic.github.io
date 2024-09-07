@@ -128,13 +128,7 @@ async function filterAndSortProjects(){
   //filter projects based on selected skill
   let filteredProjects = projects;
   if (selectedSkill !== 'All') {
-    if (skillGroups[selectedSkill]) {
-      filteredProjects = projects.filter(project => 
-        project.skills.some(skill => skillGroups[selectedSkill].includes(skill))
-      );
-    } else {
-      filteredProjects = projects.filter(project => project.skills.includes(selectedSkill));
-    }
+    filteredProjects = projects.filter(project => project.skill.includes(selectedSkill));
   }
 
   //sort projects based on sort order
@@ -165,8 +159,8 @@ async function filterAndSortProjects(){
         <p class="project-description">${project.description}</p>
       </div>
       <div class="button-div">
-        <a href="${project.demoLink}" class="btn demo-btn"> <i class="fas fa-play"></i> Demo</a>
-        ${project.codeLink ? `<a href="${project.codeLink}" class="btn code-btn"> <i class="fa-brands fa-github"></i> Code</a>` : ''}
+        <a href="${project.demoLink}" class="btn demo-btn" target="_blank"> <i class="fas fa-play"></i> Demo</a>
+        ${project.codeLink ? `<a href="${project.codeLink}" class="btn code-btn" target="_blank"> <i class="fa-brands fa-github"></i> Code</a>` : ''}
       </div>
     </div>
     `;
