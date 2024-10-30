@@ -59,7 +59,7 @@ body{
   border: 6px solid #0092a2;
   box-shadow: 0 0 15px 5px rgba(0, 146, 162, 1);
   margin-top: 10vh;
-  animation: float 3s ease-in-out infinite, rotate 6s linear infinite, scale 3s ease-in-out infinite;
+  animation: scale 3s ease-in-out infinite;
 }
 
 @keyframes float {
