@@ -1,22 +1,23 @@
 [
   {
-    "doneDate": "06/06/2024",
-    "name": "Heart Health Program",
-    "cover": "content/cover/heart_health_program.png",
-    "skill": ["C"],
-    "skillCover": ["content/skill/c.svg"],
-    "demoLink": "https://onlinegdb.com/qvB1FkvDV",
-    "codeLink": "https://github.com/tzolic/heart_health_program?tab=readme-ov-file",
-    "description": "A program that lets you calculate your BMI, take a blood pressure assessment, and calculate your ERICE score."
-  },
-  {
-    "doneDate": "29/06/2024",
-    "name": "Weekly Gantt Chart",
-    "cover": "content/cover/weekly_gantt_chart.png",
-    "skill": ["C"],
-    "skillCover": ["content/skill/c.svg"],
-    "demoLink": "https://onlinegdb.com/7F5SyrTRM",
-    "codeLink": "https://github.com/tzolic/weekly_gantt_chart?tab=readme-ov-file",
-    "description": "A gantt chart generator that helps you visualize and manage the schedule and dependencies of tasks within a weekly project."
+    "title": "Responsive Portfolio Website",
+    "date": "21/01/2025",
+    "techStack": [
+      "CSS",
+      "JavaScript",
+      "HTML",
+      "Google Apps Script",
+      "Google Sheets",
+      "JSON"
+    ],
+    "description": [
+      "A fully responsive portfolio website to showcase personal projects.",
+      "Integrated a JSON file with HTML using Javascript to load projects, ensuring scalability and simplicity for project updates.",
+      "Integrated the contact form with Google Sheets using Google Apps Script to collect and store real-time data during form submissions.",
+      "Incorporated a matrix rain animation effect using JavaScript to visually enhance the landing page UX design."
+    ],
+    "image": "content/01-responsive portfolio website.png",
+    "liveDemo": "#",
+    "github": "#"
   }
 ]
