@@ -1,6 +1,6 @@
 # Responsive Portfolio Website
 
-## A fully responsive portfolio website to showcase personal projects
+## a fully responsive portfolio website to showcase personal projects
 
 ## why use this?
 
