@@ -9,10 +9,10 @@ Description : A website where I present myself and most importantly share the pr
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Abdullah's Portfolio</title>
+  <title>tzolic's portfolio</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="x-icon" href="content/tab_icon.png">
+  <link rel="shortcut icon" type="x-icon" href="content/circle logo.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
@@ -20,13 +20,13 @@ Description : A website where I present myself and most importantly share the pr
 <body>
   
 <canvas></canvas>
-<!----------home---------->
-<div class="home">
-  <!----------menu---------->
+<!---home--->
+<section class="home">
+  <!---menu--->
   <div class="container" id="home">
     <nav id="index">
       <a class="logo">
-        <span>A</span>bdullah.
+        tzolic.
       </a>
       <ul id="sidemenu">
         <li><a href="#home">Home</a></li>
@@ -40,80 +40,68 @@ Description : A website where I present myself and most importantly share the pr
 
 
 
-    <!----------home content---------->
+    <!---home content--->
     <div class="home-content">
 
       <div class="home-img">
-        <img src="content/hero.png" alt="">
+        <img src="content/logo.png" alt="">
       </div>
 
       <div class="home-text">
-        <h1>Hi, I'm <strong>Abdullah <br> Iraqi Houssaini</strong></h1>
-        <p>I'm a <strong>computer science student</strong> @ UCD.</p>
-        <a href="content/Abdullah IRAQI HOUSSAINI.pdf" target="_blank" class="cv-button">
-            <span class="cv-icon">&#128194;</span> Download CV
-        </a>
+          <h1>Hi, I'm <strong>tzolic. <br> </strong></h1>
+          <p>I'm a <strong>computer science student</strong> @ UCD.</p>
+          <a href="content/Abdullah IRAQI HOUSSAINI.pdf" target="_blank" class="cv-button">
+              <span class="cv-icon">&#128194;</span> Download CV
+          </a>
       </div>
 
     </div>
 
   </div>
-</div>
+</section>
 
 
 
 
-<!----------projects---------->
-<div class="container" id="projects">
-  <h1 class="title top-space">Featured Projects</h1>
 
-  <div class="filter-sort-container">
 
-    <!----------sort dropdown---------->
-    <div class="filter-sort-container-1">
-      <label for="sort-dropdown">Sort by date:</label>
-      <select id="sort-dropdown">
-        <option value="doneDateDesc">Newest First</option>
-        <option value="doneDateAsc">Oldest First</option>
-      </select>
-    </div>
-    
-    <!----------filter dropdown---------->
-    <div class="filter-sort-container-2">
-      <label for="filter-dropdown">Filter by skill:</label>
-      <select id="filter-dropdown">
+<div id="projects"></div>
 
-        <option value="All" class="group-option">All</option>
+<!--PROJECT TEST-->
+<section class="projects">
+  <div class="container margin-top">
+    <h2 class="title">Projects</h2>
 
-        <option value="C">C</option>
-      </select>
+    <div class="sorting-controls">
+      <button class="sort-btn active" data-sort="newest">Newest First</button>
+      <button class="sort-btn" data-sort="oldest">Oldest First</button>
     </div>
 
+    <div class="projects-grid" id="projects-grid">
+      <!-- Project cards will be populated dynamically here -->
+    </div>
   </div>
+</section>
 
-  <!----------dynamic projects---------->
-  <div class="project-list">     
-  </div>
 
-</div>
 
 
 
 
 <!----------contact---------->
-<div id="contact" class="container">
-  <div class="row top-space">
+<div id="contact" class="container margin-top">
+  <div class="row">
 
     <div class="contact-left">
-      <h1 class="title">Contact me</h1>
+      <h1 class="title">Contact</h1>
       <p>
         <i class="fa-solid fa-location-dot"></i>
-        <span class="glow">Dublin, Ireland</span>
+        Dublin, Ireland
 
         <br><br>
 
         <i class="fa-solid fa-envelope"></i>
-        <span class="glow">aihduty@gmail.com</span>
+        aihduty@gmail.com
       </p>
 
       <div class="social-icons">
@@ -124,10 +112,13 @@ Description : A website where I present myself and most importantly share the pr
     </div>
 
     <div class="contact-right">
-      <form name="submit-to-google-sheet">
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="Email" placeholder="Your Email" required>
-        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+      <form name="submit-to-google-sheet" action="https://formsubmit.co/8d8d9a9c8aa35ba6617655b68275864b" method="POST">
+        <!--remove captcha-->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Name" required>
+        <textarea name="message" rows="4" placeholder="Message" required style="resize: none;"></textarea>
+        <input type="tel" name="phone" placeholder="Phone Number" pattern="^\+?\d{1,15}$" required>
+        <input type="email" name="email" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
         <button type="submit" class="contact-button">Submit</button>
       </form>
       <span id="msg"></span>
@@ -138,7 +129,7 @@ Description : A website where I present myself and most importantly share the pr
 
 
 <div class="copyright">
-  <p>Copyright <i class="fa-solid fa-copyright"></i> Abdullah Iraqi Houssaini</p>
+  <p>Copyright <i class="fa-solid fa-copyright"></i> tzolic</p>
 </div>
 
 

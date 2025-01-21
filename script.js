@@ -23,11 +23,11 @@ for (var i = 0; i < columns; i++) {
 
 // Setting up the draw function
 function draw() {
-  ctx.fillStyle = 'rgba(0, 0, 0, .1)';
+  ctx.fillStyle = 'rgba(16, 24, 32, .25)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (var i = 0; i < drops.length; i++) {
     var text = letters[Math.floor(Math.random() * letters.length)];
-    ctx.fillStyle = '#0092a2';
+    ctx.fillStyle = '#FEE715';
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
     drops[i]++;
     if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
@@ -65,113 +65,125 @@ window.addEventListener("scroll", function(){
 
 
 
-
-/*----------contact----------*/
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyD-y04o3K1tzcjK03M_zqa8LyT4xczQWOeuFxmpWtIB9qdarz_4UvfBkbrs_STDz1O/exec'
+//contact form
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyQwcteQQwRiSffYEiGcxoNileh-SqeMILCYEBJF0AjMnm-D6ufv2nZ3qugtZf_z7pE/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
 
-
 form.addEventListener('submit', e => {
-  e.preventDefault();
-
   //user confirmation choice
   const isConfirmed = confirm("Confirm Submission?");
-  
-  // if user confirms, proceed with form submission
-  if (isConfirmed) {
+  //if user confirms, proceed with form submission
 
-    msg.style.color = 'yellow';
+  if (isConfirmed) {
+    msg.style.color = '#FEE715';
     msg.innerHTML = "Loading...";
     
-
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.style.color = '#61b752';
-        msg.innerHTML = "Message Sent Successfully!";
-        form.reset();
-      })
+    .then(response => {
+      form.reset(); })
       .catch(error => console.error('Error!', error.message));
+  }
+  else{
+    e.preventDefault()
   }
 });
 
 
 
 
-/*----------projects sort & filter----------*/
-//function to fetch projects from JSON asynchronously
-async function fetchProjects(){
-  try {
-    const response = await fetch('projects.json');
-    if (!response.ok) {
-      throw new Error('Failed to fetch projects');
-    }
-    return await response.json();
-  } catch (error){
-    console.error('Error fetching projects:', error);
-    return [];
-  }
-}
 
-//function to convert "DD/MM/YYYY" date string to date object
-function parseDateDDMMYYYY(dateString){
-  const [day, month, year] = dateString.split('/');
-  return new Date(`${year}-${month}-${day}`);
-}
+//test
+document.addEventListener('DOMContentLoaded', function() {
+  const projectsGrid = document.querySelector('#projects-grid');
+  const sortButtons = document.querySelectorAll('.sort-btn');
+  
+  let projects = [];
 
-//function to filter and sort projects based on selected skill and sort order
-async function filterAndSortProjects(){
-  const selectedSkill = document.getElementById('filter-dropdown').value;
-  const sortOrder = document.getElementById('sort-dropdown').value;
-  const projects = await fetchProjects();
+  // Fetch JSON data
+  fetch('project.json')
+    .then(response => response.json())
+    .then(data => {
+      projects = data;
+      renderProjects(projects);
+    })
+    .catch(error => console.error('Error loading the JSON data:', error));
 
-  //filter projects based on selected skill
-  let filteredProjects = projects;
-  if (selectedSkill !== 'All') {
-    filteredProjects = projects.filter(project => project.skill.includes(selectedSkill));
-  }
+  // Function to create the HTML for each project card
+  function createProjectCard(project) {
+    const projectCard = document.createElement('div');
+    projectCard.classList.add('project-card');
+    projectCard.dataset.date = project.date;
+    // Generate tech stack HTML dynamically
 
-  //sort projects based on sort order
-  if (sortOrder === 'doneDateDesc'){
-    filteredProjects.sort((a, b) => parseDateDDMMYYYY(b.doneDate) - parseDateDDMMYYYY(a.doneDate)); // Newest first
-  } else if (sortOrder === 'doneDateAsc'){
-    filteredProjects.sort((a, b) => parseDateDDMMYYYY(a.doneDate) - parseDateDDMMYYYY(b.doneDate)); // Oldest first
-  }
+    const techStackHTML = project.techStack
+    ? project.techStack.map(tech => `<span class="tech-badge">${tech}</span>`).join('')
+    : '';
+    // Generate project links conditionally
+    const liveDemoLink = project.liveDemo ? `<a href="${project.liveDemo}" class="btn">Live Demo</a>` : '';
+    const githubLink = project.github ? `<a href="${project.github}" class="btn">GitHub</a>` : '';
+    // Check if project.description exists and is not empty
+    const descriptionHTML = project.description && project.description.length > 0
+    ? project.description.map(point => `<li>${point}</li>`).join('')
+    : '';
 
-  //display filtered and sorted projects in the UI
-  const projectList = document.querySelector('.project-list');
-  projectList.innerHTML = ''; // Clear previous content
-
-  filteredProjects.forEach(project =>{
-    const projectDiv = document.createElement('div');
-
-    projectDiv.innerHTML =
-    `
-    <div class="project">
-      <div class="img-div">
-        <img src="${project.cover}" alt="${project.name} cover" class="project-cover">
+    projectCard.innerHTML = `
+      <div class="project-image">
+        <img src="${project.image}" alt="${project.title}">
       </div>
-      <div class="text-div">
-        <h3>${project.name}</h3>
-        <div class="project-skills">
-          ${project.skillCover.map(skillCover => `<img src="${skillCover}" class="skill-icon">`).join('')}
+      <div class="project-content">
+        <h3>${project.title}</h3>
+        <div class="tech-stack">
+          ${techStackHTML}
         </div>
-        <p class="project-description">${project.description}</p>
+        <ul class="project-description-list">
+          ${descriptionHTML}
+        </ul>
+        <div class="project-links">
+          ${liveDemoLink}
+          ${githubLink}
+        </div>
       </div>
-      <div class="button-div">
-        <a href="${project.demoLink}" class="btn demo-btn" target="_blank"> <i class="fas fa-play"></i> Demo</a>
-        ${project.codeLink ? `<a href="${project.codeLink}" class="btn code-btn" target="_blank"> <i class="fa-brands fa-github"></i> Code</a>` : ''}
-      </div>
-    </div>
     `;
 
-    projectList.appendChild(projectDiv);
+    return projectCard;
+  }
+
+  // Function to render all projects
+  function renderProjects(projectsToRender) {
+    projectsGrid.innerHTML = ''; // Clear current content
+    projectsToRender.forEach(project => {
+      const projectCard = createProjectCard(project);
+      projectsGrid.appendChild(projectCard);
+    });
+  }
+
+  // Sort function
+  function convertDateToTimestamp(dateStr) {
+    const [day, month, year] = dateStr.split('/');
+    return new Date(year, month - 1, day).getTime();
+  }
+
+  function sortProjects(direction) {
+    projects.sort((a, b) => {
+      const dateA = convertDateToTimestamp(a.date);
+      const dateB = convertDateToTimestamp(b.date);
+      
+      if (direction === 'newest') {
+        return dateB - dateA;
+      } else {
+        return dateA - dateB;
+      }
+    });
+    
+    renderProjects(projects);
+  }
+
+  sortButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      sortButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      sortProjects(button.dataset.sort);
+    });
   });
-}
-
-//event listeners for dropdown changes
-document.getElementById('filter-dropdown').addEventListener('change', filterAndSortProjects);
-document.getElementById('sort-dropdown').addEventListener('change', filterAndSortProjects);
-
-//initial call to populate projects on page load
-filterAndSortProjects();
+});
