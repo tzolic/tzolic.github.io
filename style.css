@@ -1,3 +1,13 @@
+/*
+=========================================================================================================
+Author      : tzolic
+Name        : Responsive Portfolio Website
+Description : A fully responsive portfolio website to showcase personal projects
+=========================================================================================================
+*/
+
+
+
 /*---fonts---*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
 
@@ -11,8 +21,6 @@
   --main-font: 'Lora', serif;
   --accent-font: 'Poppins', sans-serif;
 }
-
-
 
 
 
@@ -32,8 +40,6 @@ body{
   background: var(--background-color);
   color: var(--accent-color);
 }
-
-
 
 
 

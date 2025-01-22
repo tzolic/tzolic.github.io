@@ -1,15 +1,17 @@
 <!--
 =========================================================================================================
-Name        : Portfolio Website
 Author      : tzolic
-Description : A website where I present myself and most importantly share the projects I have worked on.
+Name        : Responsive Portfolio Website
+Description : A fully responsive portfolio website to showcase personal projects
 =========================================================================================================
 -->
+
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>tzolic's portfolio</title>
+  <title>tzolic's Portfolio</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="x-icon" href="content/circle logo.png">
@@ -17,13 +19,17 @@ Description : A website where I present myself and most importantly share the pr
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
 
+
+
 <body>
-  
+<!--HOME-->
+<!--matrix rain animation-->
 <canvas></canvas>
-<!---home--->
+
 <section class="home">
-  <!---menu--->
   <div class="container" id="home">
+
+    <!--menu-->
     <nav id="index">
       <a class="logo">
         tzolic.
@@ -36,11 +42,8 @@ Description : A website where I present myself and most importantly share the pr
       </ul>
       <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
-    
 
-
-
-    <!---home content--->
+    <!--home content-->
     <div class="home-content">
 
       <div class="home-img">
@@ -50,7 +53,7 @@ Description : A website where I present myself and most importantly share the pr
       <div class="home-text">
           <h1>Hi, I'm <strong>tzolic. <br> </strong></h1>
           <p>I'm a <strong>computer science student</strong> @ UCD.</p>
-          <a href="content/CV Abdullah IRAQI HOUSSAINI.pdf" target="_blank" class="cv-button">
+          <a href="content/CV Abdullah IRAQI HOUSSAINI.pdf" class="cv-button">
               <span class="cv-icon">&#128194;</span> Download CV
           </a>
       </div>
@@ -62,44 +65,43 @@ Description : A website where I present myself and most importantly share the pr
 
 
 
-
-
-
+<!--PROJECTS-->
+<!--hidden div for scrolling-->
 <div id="projects"></div>
 
-<!--PROJECT TEST-->
 <section class="projects">
   <div class="container margin-top">
+
     <h2 class="title">Projects</h2>
 
+    <!--sort buttons-->
     <div class="sorting-controls">
       <button class="sort-btn active" data-sort="newest">Newest First</button>
       <button class="sort-btn" data-sort="oldest">Oldest First</button>
     </div>
 
     <div class="projects-grid" id="projects-grid">
-      <!-- Project cards will be populated dynamically here -->
+      <!-- project cards will be dynamically populated here -->
     </div>
+
   </div>
 </section>
 
 
 
-
-
-
-<!----------contact---------->
+<!---CONTACT--->
 <div id="contact" class="container margin-top">
   <div class="row">
 
+    <!--left contact row-->
     <div class="contact-left">
+
       <h1 class="title">Contact</h1>
+
       <p>
         <i class="fa-solid fa-location-dot"></i>
         Dublin, Ireland
-
         <br><br>
-
         <i class="fa-solid fa-envelope"></i>
         aihduty@gmail.com
       </p>
@@ -111,7 +113,9 @@ Description : A website where I present myself and most importantly share the pr
 
     </div>
 
+    <!--right contact row-->
     <div class="contact-right">
+
       <form name="submit-to-google-sheet" action="https://formsubmit.co/8d8d9a9c8aa35ba6617655b68275864b" method="POST">
         <!--remove captcha-->
         <input type="hidden" name="_captcha" value="false">
@@ -121,18 +125,19 @@ Description : A website where I present myself and most importantly share the pr
         <input type="email" name="email" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
         <button type="submit" class="contact-button">Submit</button>
       </form>
+      <!--loading message-->
       <span id="msg"></span>
+
     </div>
 
   </div>
 </div>
 
 
+
 <div class="copyright">
   <p>Copyright <i class="fa-solid fa-copyright"></i> tzolic</p>
 </div>
-
-
 
 
 
