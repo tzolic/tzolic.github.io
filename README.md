@@ -49,8 +49,8 @@
 3. Connect a Google Sheet to the portfolio website for realtime data storage when user sends contact form
 
 - Create a Google Sheet
- - Rename the sheet (not the title) to 'portfolio contact'
- - Name the header of your sheets by filling up the first row with names that matches the 'name' identifier in `index.html` 
+- Rename the sheet (not the title) to 'portfolio contact'
+- Name the header of your sheets by filling up the first row with names that matches the 'name' identifier in `index.html` 
 
 ```html
 <input type="text" name="name" placeholder="Name" required>
@@ -60,6 +60,7 @@
 ```
 
 For example here my name attributes are:
+
 - name
 - message
 - phone
@@ -122,7 +123,7 @@ function doPost (e) {
 const scriptURL = 'your script url'
 ```
 
-- Test submitting a contact form on the portfolio website and see if it fills up a row. If it does, you're done!'
+- Test submitting a contact form on the portfolio website and see if it fills up a row. If it does, you're done!
 
 ## License
 
