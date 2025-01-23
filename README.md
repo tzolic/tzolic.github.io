@@ -1,6 +1,6 @@
 # Responsive Portfolio Website
 
-## A fully responsive portfolio website to showcase personal projects
+## A fully responsive portfolio website to showcase my projects
 
 ## Live Demo
 
