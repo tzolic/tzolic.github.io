@@ -19,7 +19,7 @@
 3. Developers who already have a portfolio and are looking for some design inspiration or code snippets
 4. People interested in my work
 
-## Technologies Used
+## Tools Used
 
 - **Frontend:** CSS, HTML, JavaScript
 - **Data Handling:** Google Apps Script, Google Sheets, JSON
