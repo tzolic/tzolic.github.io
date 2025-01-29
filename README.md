@@ -12,17 +12,16 @@
 ![projects](readme%20visuals/01/projects.png)
 ![contact](readme%20visuals/01/contact.png)
 
-## Target Audience
-
-1. Prospective employers and clients in the computer science industry
-2. Developers looking to build a portfolio website for themselves
-3. Developers who already have a portfolio and are looking for some design inspiration or code snippets
-4. People interested in my work
-
 ## Tools Used
 
 - **Frontend:** CSS, HTML, JavaScript
 - **Data Handling:** Google Apps Script, Google Sheets, JSON
+
+## Key Features
+
+- Integrated a JSON file with HTML using Javascript to load projects, ensuring scalability and simplicity for project updates
+- Integrated the contact form with Google Sheets using Google Apps Script to collect and store real-time data during contact form submissions
+- Incorporated a matrix rain animation effect using JavaScript to visually enhance the landing page UX design
 
 ## Goals
 
@@ -31,12 +30,13 @@
 3. Make it easy for potential employers and clients to contact me
 4. Create a visually appealing and user-friendly website
 
-## Key Features
+## Target Audience
 
-- Integrated a JSON file with HTML using Javascript to load projects, ensuring scalability and simplicity for project updates
-- Integrated the contact form with Google Sheets using Google Apps Script to collect and store real-time data during contact form submissions
-- Incorporated a matrix rain animation effect using JavaScript to visually enhance the landing page UX design
-
+1. Prospective employers and clients in the computer science industry
+2. Developers looking to build a portfolio website for themselves
+3. Developers who already have a portfolio and are looking for some design inspiration or code snippets
+4. People interested in my work
+   
 ## Installation
 
 1. Clone the repository
