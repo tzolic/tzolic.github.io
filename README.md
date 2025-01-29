@@ -65,7 +65,7 @@ For example here my name attributes are:
 - phone
 - email
 
-So they must be the name of the headers of my google sheet.
+So they must be the name of the headers of my google sheet
 
 - Go to Extensions > Google Apps Script
 - Copy and paste this code
