@@ -1,6 +1,6 @@
 [
   {
-    "date": "21/01/2025",
+    "date": "29/01/2025",
     "image": "content/01-responsive portfolio website.png",
     "title": "Responsive Portfolio Website",
     "techStack": [
@@ -12,7 +12,7 @@
       "JSON"
     ],
     "description": "A straightforward and scalable responsive portfolio website to showcase projects",
-    "liveDemo": "#",
+    "liveDemo": "https://tzolic.github.io/",
     "github": "https://github.com/tzolic/tzolic.github.io"
   }
 ]
