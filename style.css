@@ -404,7 +404,6 @@ nav ul li a:hover::after{
   opacity: 0.9;
 }
 
-/*tech stack*/
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -443,7 +442,7 @@ nav ul li a:hover::after{
   background: #555;
 }
 
-/* Responsive Layout Adjustments */
+/*responsive projects*/
 @media (min-width: 481px) and (max-width: 768px) {
   .projects-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
@@ -582,6 +581,7 @@ form input, form textarea{
 }
 
 
+
 /*RESPONSIVE*/
 nav .fa-solid{
   display: none;
@@ -655,8 +655,6 @@ nav .fa-solid{
   }
 }
 
-
-
 /*phone navbar*/
 @media only screen and (max-width: 800px){
 
@@ -695,7 +693,6 @@ nav .fa-solid{
     cursor: pointer;
   }
 }
-
 
 /*logo*/
 @media only screen and (min-width: 330px) and (max-width: 800px){
