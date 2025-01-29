@@ -347,28 +347,45 @@ nav ul li a:hover::after{
 
 /*PROJECTS*/
 .container {
-  max-width: 90%;
-  margin-right: auto;
-  margin-left: auto;
+  width: min(90%, 1400px);
+  margin-inline: auto;
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+  place-items: center;
 }
 
 .project-card {
   background: var(--font-color);
-  border-radius: 10px;
+  border-radius: clamp(10px, 1.5vw, 20px);
   overflow: hidden;
-  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .project-image {
   width: 100%;
-  height: 200px;
+  height: clamp(180px, 30vw, 250px);
   overflow: hidden;
+  position: relative;
+}
+
+.project-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image::after {
+  opacity: 1;
 }
 
 .project-image img {
@@ -379,74 +396,109 @@ nav ul li a:hover::after{
 }
 
 .project-content {
-  padding: 1.2rem;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
 }
 
-.project-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.project-title {
+  font-size: clamp(1.25rem, 3vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
   color: var(--background-color);
   font-family: var(--accent-font);
+  line-height: 1.2;
 }
 
-.project-description-list {
+.project-description {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  line-height: 1.6;
   color: var(--background-color);
-  margin-bottom: 1rem;
-  padding-left: 1rem;
-  font-size: 0.8rem;
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  opacity: 0.9;
 }
 
-.project-description-list li {
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-  position: relative;
-  list-style-type: none;
-}
-
-.project-description-list li::before {
-  content: "➤";
-  color: var(--background-color);
-  font-weight: bold;
-  font-size: 0.7rem;
-  position: absolute;
-  left: -1rem;
-  margin-top: 0.15rem;
-}
-
+/*tech stack*/
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: clamp(0.3rem, 1vw, 0.5rem);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
 }
 
 .tech-badge {
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  font-size: 0.7rem;
+  padding: clamp(0.3rem, 1vw, 0.4rem) clamp(0.6rem, 1.5vw, 0.9rem);
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
   background: var(--accent-color);
   color: var(--background-color);
-  border-radius: 15px;
-  font-weight: bold;
+  border-radius: 999px;
+  font-weight: 600;
 }
 
 .project-links {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: clamp(0.8rem, 2vw, 1.2rem);
 }
 
 .btn {
-  font-size: 0.9rem;
-  padding: 0.45rem 0.9rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  padding: clamp(0.4rem, 1vw, 0.6rem) clamp(0.8rem, 2vw, 1.2rem);
   background: var(--background-color);
   color: var(--font-color);
   text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  border-radius: clamp(4px, 0.5vw, 6px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.btn:hover::after {
+  transform: translateX(0);
 }
 
 .btn:hover {
   background: #555;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-links {
+    flex-direction: column;
+  }
+  
+  .btn {
+    text-align: center;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 

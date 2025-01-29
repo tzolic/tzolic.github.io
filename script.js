@@ -125,32 +125,28 @@ document.addEventListener('DOMContentLoaded', function() {
     ? project.techStack.map(tech => `<span class="tech-badge">${tech}</span>`).join('')
     : '';
       //project description
-      const descriptionHTML = project.description && project.description.length > 0
-      ? project.description.map(point => `<li>${point}</li>`).join('')
-      : '';
+    const descriptionHTML = project.description ? `<p class="project-description">${project.description}</p>` : '';
     //project links
     const liveDemoLink = project.liveDemo ? `<a href="${project.liveDemo}" class="btn">Live Demo</a>` : '';
     const githubLink = project.github ? `<a href="${project.github}" class="btn">GitHub</a>` : '';
   
-    // project card
+    // project card HTML
     projectCard.innerHTML = `
-      <div class="project-image">
-        <img src="${project.image}" alt="${project.title}">
+    <div class="project-image">
+      <img src="${project.image}" alt="${project.title}">
+    </div>
+    <div class="project-content">
+      <h3 class="project-title">${project.title}</h3>
+      ${descriptionHTML}
+      <div class="tech-stack">
+        ${techStackHTML}
       </div>
-      <div class="project-content">
-        <h3>${project.title}</h3>
-        <div class="tech-stack">
-          ${techStackHTML}
-        </div>
-        <ul class="project-description-list">
-          ${descriptionHTML}
-        </ul>
-        <div class="project-links">
-          ${liveDemoLink}
-          ${githubLink}
-        </div>
+      <div class="project-links">
+        ${liveDemoLink}
+        ${githubLink}
       </div>
-    `;
+    </div>
+  `;
 
     return projectCard;
   }

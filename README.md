@@ -1,6 +1,6 @@
 # Responsive Portfolio Website
 
-## A fully responsive portfolio website to showcase my projects
+## A straightforward and scalable responsive portfolio website to showcase my projects
 
 ## Live Demo
 
@@ -28,14 +28,13 @@
 1. Establish a professional online presence
 2. Showcase my skills and experience in computer science
 3. Make it easy for potential employers and clients to contact me
-4. Create a visually appealing and user-friendly website
 
 ## Target Audience
 
 1. Prospective employers and clients in the computer science industry
 2. Developers looking to build a portfolio website for themselves
 3. Developers who already have a portfolio and are looking for some design inspiration or code snippets
-4. People interested in my work
+4. People interested in my work (that's like 1% of people visiting this repository)
    
 ## Installation
 
@@ -127,4 +126,4 @@ const scriptURL = 'your script url'
 
 ## License
 
-- This project is licensed under the MIT License. Click [here](LICENSE) to see the license file for details.
+- This project is licensed under the [MIT License](LICENSE)
