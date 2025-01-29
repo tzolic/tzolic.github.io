@@ -4,16 +4,16 @@
 
 ## Goals
 
-1. Showcase your skills and experience in computer science
+1. Showcase my skills and experience in computer science
 2. Establish a professional online presence
-3. Make it easy to contact you
+3. Make it easy to contact me
 
 ## Target Audience
 
 1. Prospective employers and clients in the computer science industry
 2. Developers looking to build a portfolio website for themselves
 3. Developers who already have a portfolio and are looking for some design inspiration or code snippets
-4. People interested in your work
+4. People interested in my work
 
 ## Live Demo
 
