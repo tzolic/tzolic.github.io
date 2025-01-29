@@ -34,7 +34,7 @@
 1. Prospective employers and clients in the computer science industry
 2. Developers looking to build a portfolio website for themselves
 3. Developers who already have a portfolio and are looking for some design inspiration or code snippets
-4. People interested in my work (that's like 1% of people visiting this repository)
+4. People interested in my work
    
 ## Installation
 
