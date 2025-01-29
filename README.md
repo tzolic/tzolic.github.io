@@ -1,6 +1,19 @@
 # Responsive Portfolio Website
 
-## A straightforward and scalable responsive portfolio website to showcase my projects
+## A straightforward and scalable responsive portfolio website to showcase projects
+
+## Goals
+
+1. Showcase your skills and experience in computer science
+2. Establish a professional online presence
+3. Make it easy to contact you
+
+## Target Audience
+
+1. Prospective employers and clients in the computer science industry
+2. Developers looking to build a portfolio website for themselves
+3. Developers who already have a portfolio and are looking for some design inspiration or code snippets
+4. People interested in your work
 
 ## Live Demo
 
@@ -23,19 +36,6 @@
 - Integrated the contact form with Google Sheets using Google Apps Script to collect and store real-time data during contact form submissions
 - Incorporated a matrix rain animation effect using JavaScript to visually enhance the landing page UX design
 
-## Goals
-
-1. Establish a professional online presence
-2. Showcase my skills and experience in computer science
-3. Make it easy for potential employers and clients to contact me
-
-## Target Audience
-
-1. Prospective employers and clients in the computer science industry
-2. Developers looking to build a portfolio website for themselves
-3. Developers who already have a portfolio and are looking for some design inspiration or code snippets
-4. People interested in my work
-   
 ## Installation
 
 1. Clone the repository
