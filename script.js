@@ -71,27 +71,38 @@ window.addEventListener("scroll", function(){
 
 
 
-//CONTACT FORM
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyQwcteQQwRiSffYEiGcxoNileh-SqeMILCYEBJF0AjMnm-D6ufv2nZ3qugtZf_z7pE/exec'
-const form = document.forms['submit-to-google-sheet']
-const msg = document.getElementById("msg")
+// CONTACT FORM
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwGymnE6NHSP4aWLPh23K9FB1J-DiUUjRnlzSZbnupDtWtKDaLdbWjAoEFy2p0eZPuG/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
 
 form.addEventListener('submit', e => {
+  e.preventDefault(); //prevent default form submission
+
   //user confirmation choice
   const isConfirmed = confirm("Confirm Submission?");
-  //if user confirms, proceed with form submission
 
+  //if user confirms, proceed with form submission
   if (isConfirmed) {
-    msg.style.color = '#FEE715';
+    msg.style.color = '#FEE715'; // Yellow
     msg.innerHTML = "Loading...";
-    
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => {
-      form.reset(); })
-      .catch(error => console.error('Error!', error.message));
-  }
-  else{
-    e.preventDefault()
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          msg.style.color = '#4CAF50'; // Green
+          msg.innerHTML = "Sent successfully! ✅";
+
+          //clear the message after 3 seconds
+          setTimeout(() => { msg.innerHTML = ""; }, 3000);
+        }
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        msg.style.color = '#FF0000'; // Red
+        msg.innerHTML = "Error sending message. ❌";
+      });
   }
 });
 

@@ -33,7 +33,7 @@
 ## Key Features
 
 - Integrated a JSON file with HTML using Javascript to load projects, ensuring scalability and simplicity for project updates
-- Integrated the contact form with Google Sheets using Google Apps Script to collect and store real-time data during contact form submissions
+- Integrated the contact form with Google Sheets using Google Apps Script to collect, store real-time data during contact form submissions, and automatically receive an email notification for each new entry
 - Incorporated a matrix rain animation effect using JavaScript to visually enhance the landing page UX design
 
 ## Installation
@@ -45,10 +45,10 @@
 
 1. Modify `index.html` and `style.css` to reflect your personal branding
 2. Update `projects.json` with your own projects
-3. Connect a Google Sheet to the portfolio website for realtime data storage when user sends contact form
+3. Connect a Google Sheet to the portfolio website for realtime data storage and automatic email notification for each new contact form submissions
 
 - Create a Google Sheet
-- Rename the sheet (not the title) to 'portfolio contact'
+- Rename the sheet (the title doesn't really matter) to 'portfolio contact'
 - Name the header of your sheets by filling up the first row with names that matches the 'name' identifier in `index.html` 
 
 ```html
@@ -71,44 +71,53 @@ So they must be the name of the headers of my google sheet
 - Copy and paste this code
 
 ```javascript
-var sheetName = 'portfolio contact'
-var scriptProp = PropertiesService.getScriptProperties()
+var sheetName = 'portfolio contact';
+var scriptProp = PropertiesService.getScriptProperties();
 
-function intialSetup () {
-  var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet()
-  scriptProp.setProperty('key', activeSpreadsheet.getId())
+function initialSetup() {
+  var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  scriptProp.setProperty('key', activeSpreadsheet.getId());
 }
 
-function doPost (e) {
-  var lock = LockService.getScriptLock()
-  lock.tryLock(10000)
+function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.tryLock(10000);
 
   try {
-    var doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
-    var sheet = doc.getSheetByName(sheetName)
+    var doc = SpreadsheetApp.openById(scriptProp.getProperty('key'));
+    var sheet = doc.getSheetByName(sheetName);
 
-    var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
-    var nextRow = sheet.getLastRow() + 1
+    var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+    var nextRow = sheet.getLastRow() + 1;
 
     var newRow = headers.map(function(header) {
-      return header === 'timestamp' ? new Date() : e.parameter[header]
-    })
+      return header === 'timestamp' ? new Date() : e.parameter[header];
+    });
 
-    sheet.getRange(nextRow, 1, 1, newRow.length).setValues([newRow])
+    sheet.getRange(nextRow, 1, 1, newRow.length).setValues([newRow]);
+
+    //send Email Notification
+    var recipient = "aihduty@gmail.com";  // change to your email
+    var subject = "new contact form submission";
+    var body = "you received a new message:\n\n" +
+               "name: " + e.parameter["name"] + "\n" +
+               "message: " + e.parameter["message"] + "\n" +
+               "phone: " + e.parameter["phone"] + "\n" +
+               "email: " + e.parameter["email"];
+
+    MailApp.sendEmail(recipient, subject, body);
 
     return ContentService
       .createTextOutput(JSON.stringify({ 'result': 'success', 'row': nextRow }))
-      .setMimeType(ContentService.MimeType.JSON)
-  }
-
-  catch (e) {
+      .setMimeType(ContentService.MimeType.JSON);
+  } 
+  catch (error) {
     return ContentService
-      .createTextOutput(JSON.stringify({ 'result': 'error', 'error': e }))
-      .setMimeType(ContentService.MimeType.JSON)
-  }
-
+      .createTextOutput(JSON.stringify({ 'result': 'error', 'error': error }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } 
   finally {
-    lock.releaseLock()
+    lock.releaseLock();
   }
 }
 ```
