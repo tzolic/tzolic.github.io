@@ -94,14 +94,17 @@ form.addEventListener('submit', e => {
           msg.style.color = '#4CAF50'; // Green
           msg.innerHTML = "Sent successfully! ✅";
 
-          //clear the message after 3 seconds
-          setTimeout(() => { msg.innerHTML = ""; }, 3000);
+          //clear the message after 7 seconds
+          setTimeout(() => { msg.innerHTML = ""; }, 7000);
         }
       })
       .catch(error => {
         console.error('Error!', error.message);
         msg.style.color = '#FF0000'; // Red
         msg.innerHTML = "Error sending message. ❌";
+
+        //clear the message after 7 seconds
+        setTimeout(() => { msg.innerHTML = ""; }, 7000);
       });
   }
 });
