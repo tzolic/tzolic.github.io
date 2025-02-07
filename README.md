@@ -27,8 +27,9 @@
 
 ## Tools Used
 
-- **Frontend:** CSS, HTML, JavaScript
-- **Data Handling:** Google Apps Script, Google Sheets, JSON
+- **Frontend:** CSS, JavaScript, HTML
+- **Backend:** Google Apps Script
+- **Data Handling:** JSON, Google Sheets
 
 ## Key Features
 
