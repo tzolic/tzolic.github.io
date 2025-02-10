@@ -29,7 +29,7 @@
 
 - **Frontend:** CSS, JavaScript, HTML
 - **Backend:** Google Apps Script
-- **Data Handling:** JSON, Google Sheets
+- **Database:** JSON, Google Sheets
 
 ## Key Features
 
