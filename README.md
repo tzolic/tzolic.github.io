@@ -34,7 +34,7 @@
 ## Key Features
 
 - Integrated a JSON file with HTML using Javascript to load projects, ensuring scalability and simplicity for project updates
-- Integrated the contact form with Google Sheets using Google Apps Script to collect, store real-time data during contact form submissions, and automatically receive an email notification for each new entry
+- Integrated the contact form with Google Sheets using Google Apps Script to store real-time data during contact form submissions and automatically receive an email notification for each new entry
 - Incorporated a matrix rain animation effect using JavaScript to visually enhance the landing page UX design
 
 ## Installation
