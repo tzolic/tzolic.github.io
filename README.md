@@ -6,9 +6,9 @@
 
 ## Visual Overview
 
-![home](readme%20visuals/01/home.png)
-![projects](readme%20visuals/01/projects.png)
-![contact](readme%20visuals/01/contact.png)
+![home](readme%20visuals/home.png)
+![projects](readme%20visuals/projects.png)
+![contact](readme%20visuals/contact.png)
 
 ## Tools Used
 
