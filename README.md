@@ -16,13 +16,13 @@
 - **Backend:** Google Apps Script
 - **Database:** JSON, Google Sheets
 
-## Goals
+## Goals: Why Did I Build This?
 
 1. Showcase my skills in computer science
 2. Establish a professional online presence
 3. Make it easy to contact me
 
-## Target Audience
+## Target Audience: For Who Did I Build This?
 
 1. Prospective employers and clients in the computer science industry
 2. Developers looking to build a portfolio website for themselves
