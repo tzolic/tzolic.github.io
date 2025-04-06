@@ -1,19 +1,4 @@
-# Responsive Portfolio Website
-
-## A straightforward and scalable responsive portfolio website to showcase projects
-
-## Goals
-
-1. Showcase my skills and experience in computer science
-2. Establish a professional online presence
-3. Make it easy to contact me
-
-## Target Audience
-
-1. Prospective employers and clients in the computer science industry
-2. Developers looking to build a portfolio website for themselves
-3. Developers who already have a portfolio and are looking for some design inspiration or code snippets
-4. People interested in my work
+# Scalable Responsive Portfolio Website To Showcase Projects
 
 ## Live Demo
 
@@ -30,6 +15,19 @@
 - **Frontend:** CSS, JavaScript, HTML
 - **Backend:** Google Apps Script
 - **Database:** JSON, Google Sheets
+
+## Goals
+
+1. Showcase my skills in computer science
+2. Establish a professional online presence
+3. Make it easy to contact me
+
+## Target Audience
+
+1. Prospective employers and clients in the computer science industry
+2. Developers looking to build a portfolio website for themselves
+3. Developers who already have a portfolio and are looking for some design inspiration or code snippets
+4. People interested in my work
 
 ## Key Features
 
@@ -132,8 +130,8 @@ function doPost(e) {
 const scriptURL = 'your script url'
 ```
 
-- Test submitting a contact form on the portfolio website and see if it fills up a row. If it does, you're done!
+- Test submitting a contact form on the portfolio website and see if it fills up a row. If it does, you're done
 
 ## License
 
-- This project is licensed under the [MIT license](LICENSE)
+### Click here: [MIT](LICENSE)
