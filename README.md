@@ -12,9 +12,9 @@
 
 ## Tools Used
 
-- **Frontend:** CSS, JavaScript, HTML
-- **Backend:** Google Apps Script
-- **Database:** JSON, Google Sheets
+- Frontend: CSS, JavaScript, HTML
+- Backend: Google Apps Script
+- Database: JSON, Google Sheets
 
 ## Goals: Why Did I Build This?
 
